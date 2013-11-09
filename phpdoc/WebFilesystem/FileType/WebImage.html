@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>WebFilesystem\FileType\WebImage | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../WebFilesystem/FileType.html">WebFilesystem\FileType</a>\WebImage</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>WebImage</strong>        extends <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></p>
+
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>STAT_DATETIME_FIELD</td>
+                <td class="last">
+                    <p><em>Flag to complete the <code>stat</code> result with a <code>DateTime</code> object for each timestamps</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>STAT_SIZE_FIELD</td>
+                <td class="last">
+                    <p><em>Flag to complete the <code>stat</code> result with a human readable value of the object size</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_THUMBS_PATH">
+                    static                                        
+                </td>
+                <td>$THUMBS_PATH</td>
+                <td class="last">Thumbs directory path mask</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_iptc_fields">
+                    static                                        
+                </td>
+                <td>$iptc_fields</td>
+                <td class="last">List of all IPTC field names</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $path, string $root_dir, string $file_name = null, bool $must_exist = true)
+                    <p>Construct a new myDirectory object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setFlags">setFlags</a>(int $flags)
+                    <p>Set the object's flags</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_setFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getFlags">getFlags</a>()
+                    <p>Gets the object's flags value</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getExtension">getExtension</a>()
+                    <p>Gets the object extension (not defined before PHP 5.3.6)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getExtension"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRealPath">getRealPath</a>()
+                    <p>Gets the object realpath if found</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getRealPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getFilename">getFilename</a>()
+                    <p>Gets the object file name as it was passed to the constructor (relative to <code>$root_dir</code>)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setRootDir">setRootDir</a>(string $dir_name)
+                    <p>Sets the object's root directory</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_setRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRootDir">getRootDir</a>()
+                    <p>Gets the object's root directory</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setWebPath">setWebPath</a>(string $path)
+                    <p>Sets the object web path (relative to <code>$root_dir</code>)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_setWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getWebPath">getWebPath</a>()
+                    <p>Gets the object's web path</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getRealWebPath">getRealWebPath</a>()
+                    <p>Gets the object's web real path (with the file name)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getRealWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_exists">exists</a>()
+                    <p>Check if the object exists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_pathExists">pathExists</a>()
+                    <p>Check if the object path (not the file itself but its container) exists in the server filesystem</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_pathExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_rootDirExists">rootDirExists</a>()
+                    <p>Check if the object's root directory exists in the server filesystem</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_rootDirExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getHumanReadableFilename">getHumanReadableFilename</a>()
+                    <p>Gets the directory name transformed to be displayed as a title</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getHumanReadableFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getStat">getStat</a>()
+                    <p>Get the PHP standard <code>stat()</code> function result</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getStat"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getMimeType">getMimeType</a>()
+                    <p>Get the <code>MIME</code> type of the object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getMimeType"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getCharset">getCharset</a>()
+                    <p>Get the <code>MIME</code> charset of the object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getCharset"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getMime">getMime</a>()
+                    <p>Get the full <code>MIME</code> information of the object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getMime"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setThumbFilename">setThumbFilename</a>($file_name)
+                    <p>Sets the object thumb file name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getThumbFilename">getThumbFilename</a>()
+                    <p>Get the object's thumb file name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getThumbBasename">getThumbBasename</a>()
+                    <p>Get the object's thumb file name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setThumbRootDir">setThumbRootDir</a>(string $path)
+                    <p>Sets the object thumb root directory</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getThumbRootDir">getThumbRootDir</a>()
+                    <p>Get the object's thumb root directory</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setThumbPath">setThumbPath</a>(string $path)
+                    <p>Sets the object thumb web path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getThumbPath">getThumbPath</a>()
+                    <p>Get the object's thumb web path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getThumbPathname">getThumbPathname</a>()
+                    <p>Get the object's thumb web path with file name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getThumbRealPath">getThumbRealPath</a>()
+                    <p>Get the object's web real path (with the file_name) This returns a directly HTML writable directory or file path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getThumbWebPath">getThumbWebPath</a>()
+                    <p>Get the object's thumb web path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getThumbRealWebPath">getThumbRealWebPath</a>()
+                    <p>Get the object's web real path (with the file_name) This returns a directly HTML writable directory or file path</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getInfos">getInfos</a>()
+                    <p>Scan all image infos</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getImageInfos">getImageInfos</a>()
+                    <p>Scan image standrad infos</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getIptcInfos">getIptcInfos</a>()
+                    <p>Scan image IPTC infos</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getExifInfos">getExifInfos</a>()
+                    <p>Scan image EXIF infos</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_thumbExists">thumbExists</a>()
+                    <p>Check if the thumb exists</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_isImage">isImage</a>()
+                    <p>Returns TRUE if the object is an image</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getGps">getGps</a>($exifCoord, $hemi)
+                    <p>Returns the transformed value of an EXIF GPS field to a standard GPS floated coordinate</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;float
+                </td>
+                <td class="last">
+                    <a href="#method_gps2Num">gps2Num</a>(<abbr title="WebFilesystem\FileType\num">num</abbr> $coordPart)
+                    <p>Returns a transformed GPS coordinate in a numeric floated value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getDateFromExif">getDateFromExif</a>(int $date)
+                    <p>Returns the transformed date field form EXIF info to SQL DateTime format <code>AAAA-MM-DD HH:ii:ss</code></p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 89</div>
+        <code>            public            
+    <strong>__construct</strong>(string $path, string $root_dir, string $file_name = null, bool $must_exist = true)</code>
+    </h3>
+    <div class="details">
+        <p>Construct a new myDirectory object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The path of the file</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$root_dir</td>
+                <td>The absolute path of the root directory</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$file_name</td>
+                <td>The name of the file</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$must_exist</td>
+                <td>Does the class have to verify the file existence (default is true)</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>If the file can't be found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setFlags">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 73</div>
+        <code>            public            <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+    <strong>setFlags</strong>(int $flags)</code>
+    </h3>
+    <div class="details">
+        <p>Set the object's flags</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$flags</td>
+                <td>The flags value to set (use the class's constants)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
+            <td>The object itself is returned for method chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFlags">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 83</div>
+        <code>            public            int
+    <strong>getFlags</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the object's flags value</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The object's root directory</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExtension">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getExtension"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 92</div>
+        <code>            public            string
+    <strong>getExtension</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the object extension (not defined before PHP 5.3.6)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The extension string of the object if so</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRealPath">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRealPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 101</div>
+        <code>            public            string
+    <strong>getRealPath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the object realpath if found</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The absolute canonical path of the file in the server filesystem</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFilename">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 114</div>
+        <code>            public            string
+    <strong>getFilename</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the object file name as it was passed to the constructor (relative to <code>$root_dir</code>)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The relative file path as it was passed to the constructor</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRootDir">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 124</div>
+        <code>            public            <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+    <strong>setRootDir</strong>(string $dir_name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the object's root directory</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$dir_name</td>
+                <td>The absolute path of the root directory</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
+            <td>The object itself is returned for method chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRootDir">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 135</div>
+        <code>            public            string
+    <strong>getRootDir</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the object's root directory</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object's root directory</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setWebPath">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 145</div>
+        <code>            public            <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+    <strong>setWebPath</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the object web path (relative to <code>$root_dir</code>)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The path to set, without the file name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
+            <td>The object itself is returned for method chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getWebPath">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 155</div>
+        <code>            public            string
+    <strong>getWebPath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the object's web path</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object's web path, without the file name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRealWebPath">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRealWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 166</div>
+        <code>            public            string
+    <strong>getRealWebPath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the object's web real path (with the file name)</p>
+        <p>This must returns a directly HTML writable directory or file path.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object's full file web path</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_exists">
+        <div class="location">at line 339</div>
+        <code>            public            bool
+    <strong>exists</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the object exists</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td><code>true</code> if it exists, <code>false</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_pathExists">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_pathExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 185</div>
+        <code>            public            bool
+    <strong>pathExists</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the object path (not the file itself but its container) exists in the server filesystem</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td><code>true</code> if it exists, <code>false</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rootDirExists">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_rootDirExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 195</div>
+        <code>            public            bool
+    <strong>rootDirExists</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the object's root directory exists in the server filesystem</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td><code>true</code> if it exists, <code>false</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHumanReadableFilename">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getHumanReadableFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 205</div>
+        <code>            public            string
+    <strong>getHumanReadableFilename</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the directory name transformed to be displayed as a title</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The directory name transformed</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getStat">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getStat"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 218</div>
+        <code>            public            array
+    <strong>getStat</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the PHP standard <code>stat()</code> function result</p>
+        <p>The resulting table is returned with string indexes only
+and few values transformed added depending on object's falgs.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>The result of the <code>stat()</code> function on the file, with string indexes only</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMimeType">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getMimeType"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 245</div>
+        <code>            public            string
+    <strong>getMimeType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the <code>MIME</code> type of the object</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The mime type string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getCharset">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getCharset"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 259</div>
+        <code>            public            string
+    <strong>getCharset</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the <code>MIME</code> charset of the object</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The mime charset string</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getMime">
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getMime"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 273</div>
+        <code>            public            string
+    <strong>getMime</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the full <code>MIME</code> information of the object</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The full mime string like 'type ; charset'</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setThumbFilename">
+        <div class="location">at line 111</div>
+        <code>            public            <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+    <strong>setThumbFilename</strong>($file_name)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the object thumb file name</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$file_name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
+            <td>The object itself is returned for method chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getThumbFilename">
+        <div class="location">at line 121</div>
+        <code>            public            string
+    <strong>getThumbFilename</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object's thumb file name</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object thumb file name, without any directory</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getThumbBasename">
+        <div class="location">at line 130</div>
+        <code>            public            string
+    <strong>getThumbBasename</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object's thumb file name</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object thumb file name, without any directory</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setThumbRootDir">
+        <div class="location">at line 140</div>
+        <code>            public            <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+    <strong>setThumbRootDir</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the object thumb root directory</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The path to set, without the file name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
+            <td>The object itself is returned for method chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getThumbRootDir">
+        <div class="location">at line 150</div>
+        <code>            public            string
+    <strong>getThumbRootDir</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object's thumb root directory</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object thumb web path, without the file name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setThumbPath">
+        <div class="location">at line 160</div>
+        <code>            public            <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+    <strong>setThumbPath</strong>(string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the object thumb web path</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The web path to set, without the file name</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
+            <td>The object itself is returned for method chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getThumbPath">
+        <div class="location">at line 170</div>
+        <code>            public            string
+    <strong>getThumbPath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object's thumb web path</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object thumb web path, without the file name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getThumbPathname">
+        <div class="location">at line 179</div>
+        <code>            public            string
+    <strong>getThumbPathname</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object's thumb web path with file name</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object thumb web path, with the file name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getThumbRealPath">
+        <div class="location">at line 189</div>
+        <code>            public            string
+    <strong>getThumbRealPath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object's web real path (with the file_name) This returns a directly HTML writable directory or file path</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object web full file path</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getThumbWebPath">
+        <div class="location">at line 198</div>
+        <code>            public            string
+    <strong>getThumbWebPath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object's thumb web path</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object thumb web path, without the file name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getThumbRealWebPath">
+        <div class="location">at line 208</div>
+        <code>            public            string
+    <strong>getThumbRealWebPath</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object's web real path (with the file_name) This returns a directly HTML writable directory or file path</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The object web full file path</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getInfos">
+        <div class="location">at line 217</div>
+        <code>            public            array
+    <strong>getInfos</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Scan all image infos</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>A full array of standard, EXIF and IPTC image's infos</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getImageInfos">
+        <div class="location">at line 235</div>
+        <code>            public            array
+    <strong>getImageInfos</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Scan image standrad infos</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>An array of retrieved image's infos</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIptcInfos">
+        <div class="location">at line 278</div>
+        <code>            public            array
+    <strong>getIptcInfos</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Scan image IPTC infos</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>An array of retrieved image's infos</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExifInfos">
+        <div class="location">at line 301</div>
+        <code>            public            array
+    <strong>getExifInfos</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Scan image EXIF infos</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>An array of retrieved image's infos</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_thumbExists">
+        <div class="location">at line 348</div>
+        <code>            public            bool
+    <strong>thumbExists</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Check if the thumb exists</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td><code>true</code> if it exists, <code>false</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isImage">
+        <div class="location">at line 358</div>
+        <code>            public            
+    <strong>isImage</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns TRUE if the object is an image</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>isCommonImage()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getGps">
+        <div class="location">at line 366</div>
+        <code>        static    public            
+    <strong>getGps</strong>($exifCoord, $hemi)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the transformed value of an EXIF GPS field to a standard GPS floated coordinate</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$exifCoord</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$hemi</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_gps2Num">
+        <div class="location">at line 380</div>
+        <code>        static    public            float
+    <strong>gps2Num</strong>(<abbr title="WebFilesystem\FileType\num">num</abbr> $coordPart)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a transformed GPS coordinate in a numeric floated value</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="WebFilesystem\FileType\num">num</abbr></td>
+                <td>$coordPart</td>
+                <td>The GPS coordinate to transform</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>The corresponding floated value</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDateFromExif">
+        <div class="location">at line 397</div>
+        <code>        static    public            mixed
+    <strong>getDateFromExif</strong>(int $date)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the transformed date field form EXIF info to SQL DateTime format <code>AAAA-MM-DD HH:ii:ss</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$date</td>
+                <td>The EXIF date field value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The re-formated date in SQL format</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

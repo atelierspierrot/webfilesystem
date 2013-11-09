@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>WebFilesystem\WebFilesystem | </title>
+                    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../classes.html">Classes</a></li>
+                            <li><a href="../namespaces.html">Namespaces</a></li>
+                        <li><a href="../interfaces.html">Interfaces</a></li>
+            <li><a href="../traits.html">Traits</a></li>
+            <li><a href="../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../WebFilesystem.html">WebFilesystem</a>\WebFilesystem</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>WebFilesystem</strong></p>
+
+            <div class="description">
+            <p>Commons static functions for the whole package</p>
+            <p>
+</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_REPLACEMENT_FILENAMES_CHARS">
+                    static                                        
+                </td>
+                <td>$REPLACEMENT_FILENAMES_CHARS</td>
+                <td class="last">List of characters replaced by a space in a file name to build a human readable string</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_FILESIZE_ORDERED_UNITS">
+                    static                                        
+                </td>
+                <td>$FILESIZE_ORDERED_UNITS</td>
+                <td class="last">List of units to build the size field, ordered by 1024 operator on original size</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_COMMON_IMG_EXTS">
+                    static                                        
+                </td>
+                <td>$COMMON_IMG_EXTS</td>
+                <td class="last">List of common image extensions</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_COMMON_VIDEOS_EXTS">
+                    static                                        
+                </td>
+                <td>$COMMON_VIDEOS_EXTS</td>
+                <td class="last">List of common videos extensions</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_IGNORED_FILES">
+                    static                                        
+                </td>
+                <td>$IGNORED_FILES</td>
+                <td class="last">List of common ignored files when scanning a directory content</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_IGNORED_FILES_MASKS">
+                    static                                        
+                </td>
+                <td>$IGNORED_FILES_MASKS</td>
+                <td class="last">List of common file_names to ignore when scanning a directory content, based on PCRE masks</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_slashDirname">slashDirname</a>(string $dir_name)
+                    <p>Returns a directory name with the trailing slash if needed</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_getHumanReadableName">getHumanReadableName</a>(string $file_name)
+                    <p>Render a human readable string from a file name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;null|string
+                </td>
+                <td class="last">
+                    <a href="#method_getExtensionName">getExtensionName</a>(string $file_name)
+                    <p>Returns the extension of a file name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;
+                </td>
+                <td class="last">
+                    <a href="#method_getTransformedFilesize">getTransformedFilesize</a>(float $size, int $round = 3, string $dec_delimiter = &#039;,&#039;)
+                    <p>Returns a formatted file size in bytes or derived unit</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;object
+                </td>
+                <td class="last">
+                    <a href="#method_getDateTimeFromTimestamp">getDateTimeFromTimestamp</a>(int $stamp)
+                    <p>Returns a <code>DateTime</code> object from a timestamp</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_isCommonFile">isCommonFile</a>(string $file_name)
+                    <p>Tests if a file name seems to be a valid one (also works for directories)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_isDotFile">isDotFile</a>(string $file_name)
+                    <p>Tests if a file name begins with a dot (also works for directories)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_isCommonImage">isCommonImage</a>(string $file_name)
+                    <p>Tests if a file name seems to have a common image's extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_isCommonVideo">isCommonVideo</a>(string $file_name)
+                    <p>Tests if a file name seems to have a common video's extension</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_slashDirname">
+        <div class="location">at line 60</div>
+        <code>        static    public            string
+    <strong>slashDirname</strong>(string $dir_name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a directory name with the trailing slash if needed</p>
+        <p>This function always returns <code>my_dir/</code>, working from both <code>my_dir</code> or <code>my_dir/</code>.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$dir_name</td>
+                <td>The dir_name to work on</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The dir_name always with a trailing slalsh</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHumanReadableName">
+        <div class="location">at line 73</div>
+        <code>        static    public            string
+    <strong>getHumanReadableName</strong>(string $file_name)</code>
+    </h3>
+    <div class="details">
+        <p>Render a human readable string from a file name</p>
+        <p>The original file name is rebuilt striping the extension
+and a set of commonly used separator characters in file or directories names.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file_name</td>
+                <td>The file_name to work on</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>The resulting human readable file name</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExtensionName">
+        <div class="location">at line 89</div>
+        <code>        static    public            null|string
+    <strong>getExtensionName</strong>(string $file_name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the extension of a file name</p>
+        <p>It basically returns everything after last dot. No validation is done.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file_name</td>
+                <td>The file_name to work on</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>null|string</td>
+            <td>The extension if found, <code>null</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getTransformedFilesize">
+        <div class="location">at line 103</div>
+        <code>        static    public            
+    <strong>getTransformedFilesize</strong>(float $size, int $round = 3, string $dec_delimiter = &#039;,&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a formatted file size in bytes or derived unit</p>
+        <p>This will return the size received transforming it to be readable, with the appropriate
+unit chosen in <code>WebFilesystem::$FILESIZE_ORDERED_UNITS</code>.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>float</td>
+                <td>$size</td>
+                <td>Refer to the size (in standard format given by the <code>stat()</code> function)</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$round</td>
+                <td>The number of decimal places (default is 3)</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$dec_delimiter</td>
+                <td>The decimal separator (default is a comma)</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDateTimeFromTimestamp">
+        <div class="location">at line 125</div>
+        <code>        static    public            object
+    <strong>getDateTimeFromTimestamp</strong>(int $stamp)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a <code>DateTime</code> object from a timestamp</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$stamp</td>
+                <td>The timestamp date field value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>object</td>
+            <td>A <code>DateTime</code> standard object based on the timestamp</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isCommonFile">
+        <div class="location">at line 140</div>
+        <code>        static    public            bool
+    <strong>isCommonFile</strong>(string $file_name)</code>
+    </h3>
+    <div class="details">
+        <p>Tests if a file name seems to be a valid one (also works for directories)</p>
+        <p>This will test if a file name seems valid by skipping the <code>self::$IGNORED_FILES</code> file names
+and testing it with each <code>self::$IGNORED_FILES_MASKS</code> mask.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file_name</td>
+                <td>The file name to test</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td><code>true</code> if the file name seems to be valid, <code>false</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isDotFile">
+        <div class="location">at line 161</div>
+        <code>        static    public            bool
+    <strong>isDotFile</strong>(string $file_name)</code>
+    </h3>
+    <div class="details">
+        <p>Tests if a file name begins with a dot (also works for directories)</p>
+        <p>This will test if a file name seems valid by skipping the <code>self::$IGNORED_FILES</code> file names
+and testing it with each <code>self::$IGNORED_FILES_MASKS</code> mask.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file_name</td>
+                <td>The file name to test</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td><code>true</code> if the file name seems to be valid, <code>false</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isCommonImage">
+        <div class="location">at line 178</div>
+        <code>        static    public            bool
+    <strong>isCommonImage</strong>(string $file_name)</code>
+    </h3>
+    <div class="details">
+        <p>Tests if a file name seems to have a common image's extension</p>
+        <p>Directories (if known) or file names beginning with a dot are skipped.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file_name</td>
+                <td>The file name to test</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td><code>true</code> if the file_name seems to be an image, <code>false</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isCommonVideo">
+        <div class="location">at line 194</div>
+        <code>        static    public            bool
+    <strong>isCommonVideo</strong>(string $file_name)</code>
+    </h3>
+    <div class="details">
+        <p>Tests if a file name seems to have a common video's extension</p>
+        <p>Directories (if known) or file names beginning with a dot are skipped.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$file_name</td>
+                <td>The file name to test</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td><code>true</code> if the file_name seems to be a video, <code>false</code> otherwise</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

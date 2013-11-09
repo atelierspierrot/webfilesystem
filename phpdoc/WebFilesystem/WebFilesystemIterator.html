@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>WebFilesystem\WebFilesystemIterator | </title>
+                    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../classes.html">Classes</a></li>
+                            <li><a href="../namespaces.html">Namespaces</a></li>
+                        <li><a href="../interfaces.html">Interfaces</a></li>
+            <li><a href="../traits.html">Traits</a></li>
+            <li><a href="../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../WebFilesystem.html">WebFilesystem</a>\WebFilesystemIterator</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>WebFilesystemIterator</strong>        extends <a href="http://php.net/FilesystemIterator"><abbr title="FilesystemIterator">FilesystemIterator</abbr></a>        implements
+        <a href="http://php.net/SeekableIterator"><abbr title="SeekableIterator">SeekableIterator</abbr></a>, <a href="http://php.net/Traversable"><abbr title="Traversable">Traversable</abbr></a>, <a href="http://php.net/Iterator"><abbr title="Iterator">Iterator</abbr></a>, <a href="http://php.net/Countable"><abbr title="Countable">Countable</abbr></a></p>
+
+            <div class="description">
+            <p>Special web's version of the PHP >=5.3 standard class <code>FilesystemIterator</code> <a href="http://www.php.net/manual/en/class.splfileinfo.php">http://www.php.net/manual/en/class.splfileinfo.php</a></p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>SKIP_DOTTED</td>
+                <td class="last">
+                    <p><em>New flag to skip files with a name beginning with a dot</em></p>
+                    <p>It is part of the default object's flags</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CURRENT_AS_WEBFILEINFO</td>
+                <td class="last">
+                    <p><em>New flag to make <code>current()</code> returns a <code>WebFileInfo</code> object</em></p>
+                    <p>It is part of the default object's flags</p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(string $path, int $flags = 16432)
+                    <p>Overwriting the constructor to use the new <code>setFlags()</code> method and set a new default flags value</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_setFlags">setFlags</a>(int $flags = null)
+                    <p>Overwriting the default <code>setFlags()</code> method to accept new flags</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getFlags">getFlags</a>()
+                    <p>Overwriting the default <code>getFlags()</code> method to accept new flags</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_current">current</a>()
+                    <p>Overwriting the default <code>current()</code> method to return a <code>WebFileInfo</code> object if so</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_rewind">rewind</a>()
+                    <p>Overwriting the default <code>rewind()</code> method to skip files beginning with a dot if so</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method_next">next</a>()
+                    <p>Overwriting the default <code>next()</code> method to skip files beginning with a dot if so</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_count">count</a>()
+                    <p>Implementation of the <code>count()</code> method of the <code>Countable</code> interface</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 52</div>
+        <code>            public            
+    <strong>__construct</strong>(string $path, int $flags = 16432)</code>
+    </h3>
+    <div class="details">
+        <p>Overwriting the constructor to use the new <code>setFlags()</code> method and set a new default flags value</p>
+        <p>The new default flags are : WebFilesystemIterator::KEY<em>AS</em>PATHNAME | WebFilesystemIterator::CURRENT<em>AS</em>WEBFILEINFO | WebFilesystemIterator::SKIP_DOTTED</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>The path of the new filesystem object</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$flags</td>
+                <td>The object options'flags value</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setFlags">
+        <div class="location">at line 67</div>
+        <code>            public            <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
+    <strong>setFlags</strong>(int $flags = null)</code>
+    </h3>
+    <div class="details">
+        <p>Overwriting the default <code>setFlags()</code> method to accept new flags</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$flags</td>
+                <td>A set of object options'flags</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></td>
+            <td>The object itself is returned for method chaining</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getFlags">
+        <div class="location">at line 77</div>
+        <code>            public            int
+    <strong>getFlags</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Overwriting the default <code>getFlags()</code> method to accept new flags</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The current options'flags value for the object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_current">
+        <div class="location">at line 88</div>
+        <code>            public            mixed
+    <strong>current</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Overwriting the default <code>current()</code> method to return a <code>WebFileInfo</code> object if so</p>
+        <p>If the flag <code>CURRENT_AS_WEBFILEINFO</code> is active, this will return a <code>WebFileInfo</code> object.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>The value of the current iteration, as a <code>WebFileInfo</code> object if requested or as the default result of the parent's method</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_rewind">
+        <div class="location">at line 113</div>
+        <code>            public            void
+    <strong>rewind</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Overwriting the default <code>rewind()</code> method to skip files beginning with a dot if so</p>
+        <p>It the flag <code>SKIP_DOTTED</code> is active, this will skip files beginning with a dot.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_next">
+        <div class="location">at line 127</div>
+        <code>            public            void
+    <strong>next</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Overwriting the default <code>next()</code> method to skip files beginning with a dot if so</p>
+        <p>If the flag <code>SKIP_DOTTED</code> is active, this will skip files beginning with a dot.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_count">
+        <div class="location">at line 139</div>
+        <code>            public            int
+    <strong>count</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Implementation of the <code>count()</code> method of the <code>Countable</code> interface</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>The number of valid items of the object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
