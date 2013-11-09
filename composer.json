@@ -1,0 +1,32 @@
+{
+    "name": "atelierspierrot/webfilesystem",
+    "type": "library",
+    "description": "Extending the SPL file system to manage webserver based file system (such as assets).",
+    "keywords": ["file", "directory", "webserver", "spl"],
+    "homepage": "http://github.com/atelierspierrot/webfilesystem",
+    "license": "GPL-3.0",
+    "authors": [{
+        "name": "Les Ateliers Pierrot & contributors",
+        "email": "contact@ateliers-pierrot.fr",
+        "homepage": "http://www.ateliers-pierrot.fr/"
+    },{
+        "name": "Pierre Cassat",
+        "email": "piwi@ateliers-pierrot.fr",
+        "homepage": "http://github.com/pierowbmstr"
+    }],
+    "require": {
+        "php": ">=5.3.0",
+        "atelierspierrot/patterns": "1.*",
+        "atelierspierrot/library": "1.*"
+    },
+    "require-dev": {
+        "sami/sami": "dev-master",
+        "phpmd/phpmd" : "1.4.*"
+    },
+    "autoload": { "psr-0": { "WebFilesystem": "src/" } },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
