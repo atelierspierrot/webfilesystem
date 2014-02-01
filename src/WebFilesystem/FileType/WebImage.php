@@ -86,7 +86,7 @@ class WebImage extends WebFileInfo
 	 * @param bool $must_exist Does the class have to verify the file existence (default is true)
      * @throws Exception If the file can't be found
      */
-    public function __construct($path, $root_dir, $file_name = null, $must_exist = true)
+    public function __construct($path, $root_dir = null, $file_name = null, $must_exist = true)
     {
         if (!empty($file_name)) {
             $path = DirectoryHelper::slashDirname($path).$file_name;
@@ -407,6 +407,51 @@ class WebImage extends WebFileInfo
         return "$year-$month-$day $hour:$minutes:$seconds";
     }
     
+    /**
+     * Get the `base64` encoded image content
+     * 
+     * @param bool $to_href Set to `true` to get a full result to use in `img` tag
+     *
+     * @return string
+     */
+    public function getBase64Content($to_href = false)
+    {
+		if ($this->exists() && $this->isImage()) {
+    		$image_infos = $this->getImageInfos();
+            $base64 = '';
+            if ($to_href) {
+                $type = pathinfo($this->getRealPath(), PATHINFO_EXTENSION);
+                $base64 .= 'data:image/' . $type . ';base64,';
+            }
+            $data = file_get_contents($this->getRealPath());
+            $base64 .= base64_encode($data);
+            return $base64;
+		}
+        return '';
+    }
+
+    /**
+     * Get the image's height in pixels
+     *
+     * @return null|int
+     */
+    public function getHeight()
+    {
+    	$image_infos = $this->getImageInfos();
+		return isset($image_infos['height']) ? $image_infos['height'] : null;
+    }
+
+    /**
+     * Get the image's width in pixels
+     *
+     * @return null|int
+     */
+    public function getWidth()
+    {
+    	$image_infos = $this->getImageInfos();
+		return isset($image_infos['width']) ? $image_infos['width'] : null;
+    }
+
 }
 
 // Endfile
