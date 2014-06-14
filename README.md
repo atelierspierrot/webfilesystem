@@ -49,9 +49,9 @@ at <http://docs.ateliers-pierrot.fr/webfilesystem/>.
 
 >    Web Filesystem
 
->    https://github.com/atelierspierrot/webfilesystem
+>    http://github.com/atelierspierrot/webfilesystem
 
->    Copyleft 2013, Pierre Cassat and contributors
+>    Copyleft 2013-2014, Pierre Cassat and contributors
 
 >    Licensed under the GPL Version 3 license.
 
