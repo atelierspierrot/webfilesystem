@@ -54,6 +54,7 @@ class WebFilesystem
      * Returns a directory name with the trailing slash if needed
      *
      * This function always returns `my_dir/`, working from both `my_dir` or `my_dir/`.
+     *
      * @param string $dir_name The dir_name to work on
      * @return string The dir_name always with a trailing slalsh
      */
@@ -67,6 +68,7 @@ class WebFilesystem
      *
      * The original file name is rebuilt striping the extension
      * and a set of commonly used separator characters in file or directories names.
+     *
      * @param string $file_name The file_name to work on
      * @return string The resulting human readable file name
      */
@@ -83,6 +85,7 @@ class WebFilesystem
      * Returns the extension of a file name
      *
      * It basically returns everything after last dot. No validation is done.
+     *
      * @param string $file_name The file_name to work on
      * @return null|string The extension if found, `null` otherwise
      */
@@ -96,6 +99,7 @@ class WebFilesystem
      *
      * This will return the size received transforming it to be readable, with the appropriate
      * unit chosen in `WebFilesystem::$FILESIZE_ORDERED_UNITS`.
+     *
      * @param float $size Refer to the size (in standard format given by the `stat()` function)
      * @param int $round The number of decimal places (default is 3)
      * @param string $dec_delimiter The decimal separator (default is a comma)
@@ -134,6 +138,7 @@ class WebFilesystem
      *
      * This will test if a file name seems valid by skipping the `self::$IGNORED_FILES` file names
      * and testing it with each `self::$IGNORED_FILES_MASKS` mask.
+     *
      * @param string $file_name The file name to test
      * @return bool `true` if the file name seems to be valid, `false` otherwise
      */
@@ -155,6 +160,7 @@ class WebFilesystem
      *
      * This will test if a file name seems valid by skipping the `self::$IGNORED_FILES` file names
      * and testing it with each `self::$IGNORED_FILES_MASKS` mask.
+     *
      * @param string $file_name The file name to test
      * @return bool `true` if the file name seems to be valid, `false` otherwise
      */
@@ -172,6 +178,7 @@ class WebFilesystem
      * Tests if a file name seems to have a common image's extension
      *
      * Directories (if known) or file names beginning with a dot are skipped.
+     *
      * @param string $file_name The file name to test
      * @return bool `true` if the file_name seems to be an image, `false` otherwise
      */
@@ -188,6 +195,7 @@ class WebFilesystem
      * Tests if a file name seems to have a common video's extension
      *
      * Directories (if known) or file names beginning with a dot are skipped.
+     *
      * @param string $file_name The file name to test
      * @return bool `true` if the file_name seems to be a video, `false` otherwise
      */

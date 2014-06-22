@@ -9,8 +9,8 @@
 
 namespace WebFilesystem;
 
-use WebFilesystem\WebFilesystem,
-    WebFilesystem\WebFilesystemIterator;
+use WebFilesystem\WebFilesystem;
+use WebFilesystem\WebFilesystemIterator;
 
 /**
  */
@@ -60,6 +60,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Set a class name to build each item
+     *
      * @param string $class_name The class name to use ; the class must exist and be callable
      * @return self The object itself is returned for method chaining
      */
@@ -71,6 +72,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Get the class name to build each item
+     *
      * @return string The class name to use ; the class must exist and be callable
      */
     public function getFileClass()
@@ -80,6 +82,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Set a valid callback to validate each file item
+     *
      * @param callback $file_validation_callback A callback to validate each file item
      * @return self The object itself is returned for method chaining
      */
@@ -91,6 +94,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Set a valid callback to validate each file item
+     *
      * @return callback the callback to validate each file item
      */
     public function getFileValidationCallback()
@@ -100,6 +104,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Set a valid callback to validate each directory item
+     *
      * @param callback $directory_validation_callback A callback to validate each directory item
      * @return self The object itself is returned for method chaining
      */
@@ -111,6 +116,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Set a valid callback to validate each directory item
+     *
      * @return callback The callback to validate each directory item
      */
     public function getDirectoryValidationCallback()
@@ -120,6 +126,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Implementing the `getChildren()` method to return this class for directories items
+     *
      * @return class A new object with the same options as `self`
      */
     public function getChildren()
@@ -135,6 +142,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Implementing the `getSubPath()` method
+     *
      * @return null|string The path of the current sub-directory
      */
     public function getSubPath()
@@ -149,6 +157,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Implementing the `getSubPathname()` method
+     *
      * @return null|string The pathname of the current sub-directory
      */
     public function getSubPathname()
@@ -161,6 +170,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Implementing the `hasChildren()` method
+     *
      * @return bool `true` if the current item seems to be a directory, `false` otherwise
      */
     public function hasChildren($allow_links=false)
@@ -170,7 +180,8 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Implementing the `seek()` method of the `Seekable` interface
-     * @throws OutOfBoundsException if the provided position doesn't exist
+     *
+     * @throws \OutOfBoundsException if the provided position doesn't exist
      * @return void
      */
     public function seek($position)
@@ -188,8 +199,9 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Overwriting the default `current()` method to use the file class option
-     * @throws LogicException if the file class defined can't be found
-     * @throws LogicException if the file class doesn't extend `WebFilesystem\WebFileInfo`
+     *
+     * @throws \LogicException if the file class defined can't be found
+     * @throws \LogicException if the file class doesn't extend `WebFilesystem\WebFileInfo`
      * @return mixed The result of the parent `current()` method if the item is a directory or no
      *              specific class is set ; an instance of the file class option otherwise
      */
@@ -215,12 +227,13 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
         return new $_cls( $path, str_replace($path, '', $realpath) );
     }
 
-	/**
+    /**
      * Overwriting the default `rewind()` method to skip files beginning with a dot if so
      *
      * If the flag `SKIP_DOTTED` is active, this will skip files beginning with a dot
+     *
      * @return void
-	 */
+     */
     public function rewind()
     {
         parent::rewind();
@@ -229,12 +242,13 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
         }
     }
 
-	/**
+    /**
      * Overwriting the default `next()` method to skip files beginning with a dot if so
      *
      * If the flag `SKIP_DOTTED` is active, this will skip files beginning with a dot
+     *
      * @return void
-	 */
+     */
     public function next()
     {
         parent::next();
@@ -243,10 +257,11 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
         }
     }
 
-	/**
+    /**
      * Implementation of the `count()` method on each recursion items and sub-items
+     *
      * @return int The count of the object valid items and sub-items recursively
-	 */
+     */
     public function recursiveCount()
     {
         $count=0;
@@ -261,6 +276,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
 
     /**
      * Count children of a sub-directory
+     *
      * @internal
      * @return int The number of `current()` entry valid sub-items recursively
      */
@@ -275,6 +291,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
     
     /**
      * Validate `current()` with object's callbacks if so
+     *
      * @internal
      */
     protected function _validateItem()
@@ -291,9 +308,10 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
     
     /**
      * Validate `current()` with a specific callback if so
+     *
      * @param callback $callback One of the object's callback to execute on current item
-     * @throws LogicException If the callback is not a function or is not callbale
-     * @throws BadFunctionCallException If running the callback throws an exception
+     * @throws \LogicException If the callback is not a function or is not callable
+     * @throws \BadFunctionCallException If running the callback throws an exception
      * @internal
      */
     protected function _validate($callback)
@@ -329,7 +347,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
                 if (false===$result) {
                     $this->next();
                 }
-            } catch(Exception $e) {
+            } catch(\Exception $e) {
                 throw new \BadFunctionCallException(
                     sprintf('Function named "%s" used as callback sent an exception with argument "%s"!', $callback, $entry),
                     0, $e
