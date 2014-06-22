@@ -267,7 +267,7 @@
                     <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
                 </td>
                 <td class="last">
-                    <a href="#method_setThumbFilename">setThumbFilename</a>($file_name)
+                    <a href="#method_setThumbFilename">setThumbFilename</a>(string $file_name)
                     <p>Sets the object thumb file name</p>
                 </td>
                 <td></td>
@@ -447,7 +447,7 @@
                     static&nbsp;float
                 </td>
                 <td class="last">
-                    <a href="#method_gps2Num">gps2Num</a>(<abbr title="WebFilesystem\FileType\num">num</abbr> $coordPart)
+                    <a href="#method_gps2Num">gps2Num</a>(int $coordPart)
                     <p>Returns a transformed GPS coordinate in a numeric floated value</p>
                 </td>
                 <td></td>
@@ -498,7 +498,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 89</div>
+        <div class="location">at line 90</div>
         <code>            public            
     <strong>__construct</strong>(string $path, string $root_dir = null, string $file_name = null, bool $must_exist = true)</code>
     </h3>
@@ -548,7 +548,7 @@
     </div>
 
                 <h3 id="method_setFlags">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 73</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 74</div>
         <code>            public            <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
     <strong>setFlags</strong>(int $flags)</code>
     </h3>
@@ -583,7 +583,7 @@
     </div>
 
                 <h3 id="method_getFlags">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 83</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 85</div>
         <code>            public            int
     <strong>getFlags</strong>()</code>
     </h3>
@@ -608,7 +608,7 @@
     </div>
 
                 <h3 id="method_getExtension">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getExtension"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 92</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getExtension"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 95</div>
         <code>            public            string
     <strong>getExtension</strong>()</code>
     </h3>
@@ -633,7 +633,7 @@
     </div>
 
                 <h3 id="method_getRealPath">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRealPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 101</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRealPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 105</div>
         <code>            public            string
     <strong>getRealPath</strong>()</code>
     </h3>
@@ -658,7 +658,7 @@
     </div>
 
                 <h3 id="method_getFilename">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 114</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 119</div>
         <code>            public            string
     <strong>getFilename</strong>()</code>
     </h3>
@@ -683,7 +683,7 @@
     </div>
 
                 <h3 id="method_setRootDir">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 124</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 130</div>
         <code>            public            <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
     <strong>setRootDir</strong>(string $dir_name)</code>
     </h3>
@@ -718,7 +718,7 @@
     </div>
 
                 <h3 id="method_getRootDir">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 135</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 142</div>
         <code>            public            string
     <strong>getRootDir</strong>()</code>
     </h3>
@@ -743,7 +743,7 @@
     </div>
 
                 <h3 id="method_setWebPath">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 145</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 153</div>
         <code>            public            <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
     <strong>setWebPath</strong>(string $path)</code>
     </h3>
@@ -778,7 +778,7 @@
     </div>
 
                 <h3 id="method_getWebPath">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 155</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 164</div>
         <code>            public            string
     <strong>getWebPath</strong>()</code>
     </h3>
@@ -803,7 +803,7 @@
     </div>
 
                 <h3 id="method_getRealWebPath">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRealWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 166</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRealWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 176</div>
         <code>            public            string
     <strong>getRealWebPath</strong>()</code>
     </h3>
@@ -827,7 +827,7 @@
     </div>
 
                 <h3 id="method_exists">
-        <div class="location">at line 339</div>
+        <div class="location">at line 356</div>
         <code>            public            bool
     <strong>exists</strong>()</code>
     </h3>
@@ -852,7 +852,7 @@
     </div>
 
                 <h3 id="method_pathExists">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_pathExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 185</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_pathExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 197</div>
         <code>            public            bool
     <strong>pathExists</strong>()</code>
     </h3>
@@ -877,7 +877,7 @@
     </div>
 
                 <h3 id="method_rootDirExists">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_rootDirExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 195</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_rootDirExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 208</div>
         <code>            public            bool
     <strong>rootDirExists</strong>()</code>
     </h3>
@@ -902,7 +902,7 @@
     </div>
 
                 <h3 id="method_getHumanReadableFilename">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getHumanReadableFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 205</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getHumanReadableFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 219</div>
         <code>            public            string
     <strong>getHumanReadableFilename</strong>()</code>
     </h3>
@@ -927,14 +927,14 @@
     </div>
 
                 <h3 id="method_getStat">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getStat"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 218</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getStat"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 233</div>
         <code>            public            array
     <strong>getStat</strong>()</code>
     </h3>
     <div class="details">
         <p>Get the PHP standard <code>stat()</code> function result</p>
         <p>The resulting table is returned with string indexes only
-and few values transformed added depending on object's falgs.</p>
+and few values transformed added depending on object's flags.</p>
         <div class="tags">
             
                             <h4>Return Value</h4>
@@ -952,7 +952,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getMimeType">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getMimeType"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 245</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getMimeType"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 261</div>
         <code>            public            string
     <strong>getMimeType</strong>()</code>
     </h3>
@@ -977,7 +977,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getCharset">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getCharset"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 259</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getCharset"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 276</div>
         <code>            public            string
     <strong>getCharset</strong>()</code>
     </h3>
@@ -1002,7 +1002,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getMime">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getMime"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 273</div>
+        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getMime"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 291</div>
         <code>            public            string
     <strong>getMime</strong>()</code>
     </h3>
@@ -1027,9 +1027,9 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_setThumbFilename">
-        <div class="location">at line 111</div>
+        <div class="location">at line 113</div>
         <code>            public            <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
-    <strong>setThumbFilename</strong>($file_name)</code>
+    <strong>setThumbFilename</strong>(string $file_name)</code>
     </h3>
     <div class="details">
         <p>Sets the object thumb file name</p>
@@ -1040,10 +1040,9 @@ and few values transformed added depending on object's falgs.</p>
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$file_name</td>
-                <td>
-</td>
+                <td>The file<em>name to set, without other path (just a file</em>name)</td>
             </tr>
             </table>
 
@@ -1053,7 +1052,8 @@ and few values transformed added depending on object's falgs.</p>
                     <table>
         <tr>
             <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
-            <td>The object itself is returned for method chaining</td>
+            <td>
+</td>
         </tr>
     </table>
 
@@ -1063,7 +1063,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getThumbFilename">
-        <div class="location">at line 121</div>
+        <div class="location">at line 124</div>
         <code>            public            string
     <strong>getThumbFilename</strong>()</code>
     </h3>
@@ -1088,7 +1088,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getThumbBasename">
-        <div class="location">at line 130</div>
+        <div class="location">at line 134</div>
         <code>            public            string
     <strong>getThumbBasename</strong>()</code>
     </h3>
@@ -1113,7 +1113,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_setThumbRootDir">
-        <div class="location">at line 140</div>
+        <div class="location">at line 145</div>
         <code>            public            <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
     <strong>setThumbRootDir</strong>(string $path)</code>
     </h3>
@@ -1138,7 +1138,8 @@ and few values transformed added depending on object's falgs.</p>
                     <table>
         <tr>
             <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
-            <td>The object itself is returned for method chaining</td>
+            <td>
+</td>
         </tr>
     </table>
 
@@ -1148,7 +1149,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getThumbRootDir">
-        <div class="location">at line 150</div>
+        <div class="location">at line 156</div>
         <code>            public            string
     <strong>getThumbRootDir</strong>()</code>
     </h3>
@@ -1173,7 +1174,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_setThumbPath">
-        <div class="location">at line 160</div>
+        <div class="location">at line 167</div>
         <code>            public            <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
     <strong>setThumbPath</strong>(string $path)</code>
     </h3>
@@ -1198,7 +1199,8 @@ and few values transformed added depending on object's falgs.</p>
                     <table>
         <tr>
             <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
-            <td>The object itself is returned for method chaining</td>
+            <td>
+</td>
         </tr>
     </table>
 
@@ -1208,7 +1210,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getThumbPath">
-        <div class="location">at line 170</div>
+        <div class="location">at line 178</div>
         <code>            public            string
     <strong>getThumbPath</strong>()</code>
     </h3>
@@ -1233,7 +1235,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getThumbPathname">
-        <div class="location">at line 179</div>
+        <div class="location">at line 188</div>
         <code>            public            string
     <strong>getThumbPathname</strong>()</code>
     </h3>
@@ -1258,7 +1260,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getThumbRealPath">
-        <div class="location">at line 189</div>
+        <div class="location">at line 199</div>
         <code>            public            string
     <strong>getThumbRealPath</strong>()</code>
     </h3>
@@ -1283,7 +1285,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getThumbWebPath">
-        <div class="location">at line 198</div>
+        <div class="location">at line 209</div>
         <code>            public            string
     <strong>getThumbWebPath</strong>()</code>
     </h3>
@@ -1308,7 +1310,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getThumbRealWebPath">
-        <div class="location">at line 208</div>
+        <div class="location">at line 220</div>
         <code>            public            string
     <strong>getThumbRealWebPath</strong>()</code>
     </h3>
@@ -1333,7 +1335,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getInfos">
-        <div class="location">at line 217</div>
+        <div class="location">at line 230</div>
         <code>            public            array
     <strong>getInfos</strong>()</code>
     </h3>
@@ -1358,7 +1360,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getImageInfos">
-        <div class="location">at line 235</div>
+        <div class="location">at line 249</div>
         <code>            public            array
     <strong>getImageInfos</strong>()</code>
     </h3>
@@ -1383,7 +1385,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getIptcInfos">
-        <div class="location">at line 278</div>
+        <div class="location">at line 293</div>
         <code>            public            array
     <strong>getIptcInfos</strong>()</code>
     </h3>
@@ -1408,7 +1410,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getExifInfos">
-        <div class="location">at line 301</div>
+        <div class="location">at line 317</div>
         <code>            public            array
     <strong>getExifInfos</strong>()</code>
     </h3>
@@ -1433,7 +1435,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_thumbExists">
-        <div class="location">at line 348</div>
+        <div class="location">at line 366</div>
         <code>            public            bool
     <strong>thumbExists</strong>()</code>
     </h3>
@@ -1458,7 +1460,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_isImage">
-        <div class="location">at line 358</div>
+        <div class="location">at line 377</div>
         <code>            public            
     <strong>isImage</strong>()</code>
     </h3>
@@ -1483,7 +1485,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getGps">
-        <div class="location">at line 366</div>
+        <div class="location">at line 385</div>
         <code>        static    public            
     <strong>getGps</strong>($exifCoord, $hemi)</code>
     </h3>
@@ -1516,9 +1518,9 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_gps2Num">
-        <div class="location">at line 380</div>
+        <div class="location">at line 400</div>
         <code>        static    public            float
-    <strong>gps2Num</strong>(<abbr title="WebFilesystem\FileType\num">num</abbr> $coordPart)</code>
+    <strong>gps2Num</strong>(int $coordPart)</code>
     </h3>
     <div class="details">
         <p>Returns a transformed GPS coordinate in a numeric floated value</p>
@@ -1529,7 +1531,7 @@ and few values transformed added depending on object's falgs.</p>
 
                     <table>
                     <tr>
-                <td><abbr title="WebFilesystem\FileType\num">num</abbr></td>
+                <td>int</td>
                 <td>$coordPart</td>
                 <td>The GPS coordinate to transform</td>
             </tr>
@@ -1551,7 +1553,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getDateFromExif">
-        <div class="location">at line 397</div>
+        <div class="location">at line 418</div>
         <code>        static    public            mixed
     <strong>getDateFromExif</strong>(int $date)</code>
     </h3>
@@ -1586,7 +1588,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getBase64Content">
-        <div class="location">at line 417</div>
+        <div class="location">at line 437</div>
         <code>            public            string
     <strong>getBase64Content</strong>(bool $to_href = false)</code>
     </h3>
@@ -1622,7 +1624,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getHeight">
-        <div class="location">at line 438</div>
+        <div class="location">at line 458</div>
         <code>            public            null|int
     <strong>getHeight</strong>()</code>
     </h3>
@@ -1648,7 +1650,7 @@ and few values transformed added depending on object's falgs.</p>
     </div>
 
                 <h3 id="method_getWidth">
-        <div class="location">at line 449</div>
+        <div class="location">at line 469</div>
         <code>            public            null|int
     <strong>getWidth</strong>()</code>
     </h3>
