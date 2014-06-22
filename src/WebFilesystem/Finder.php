@@ -9,15 +9,17 @@
 
 namespace WebFilesystem;
 
-use WebFilesystem\WebFilesystem;
-use Library\Helper\Directory as DirectoryHelper,
-    Library\Helper\Url as UrlHelper,
-    Library\Helper\Regex as RegexHelper;
-use Patterns\Abstracts\AbstractStaticCreator;
+use \WebFilesystem\WebFilesystem;
+use \Library\Helper\Directory as DirectoryHelper;
+use \Library\Helper\Url as UrlHelper;
+use \Library\Helper\Regex as RegexHelper;
+use \Patterns\Abstracts\AbstractStaticCreator;
 
 /**
  */
-class Finder extends AbstractStaticCreator implements \Iterator
+class Finder
+    extends AbstractStaticCreator
+    implements \Iterator
 {
 
     protected $_is_inited = false;
