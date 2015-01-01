@@ -445,7 +445,6 @@ class WebImage extends WebFileInfo
      * Get the `base64` encoded image content
      * 
      * @param bool $to_href Set to `true` to get a full result to use in `img` tag
-     *
      * @return string
      */
     public function getBase64Content($to_href = false)
@@ -463,7 +462,7 @@ class WebImage extends WebFileInfo
         }
         return '';
     }
-
+    
     /**
      * Get the image's height in pixels
      *
@@ -474,7 +473,7 @@ class WebImage extends WebFileInfo
         $image_infos = $this->getImageInfos();
         return isset($image_infos['height']) ? $image_infos['height'] : null;
     }
-
+    
     /**
      * Get the image's width in pixels
      *
