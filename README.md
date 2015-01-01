@@ -51,7 +51,7 @@ at <http://docs.ateliers-pierrot.fr/webfilesystem/>.
 
 >    http://github.com/atelierspierrot/webfilesystem
 
->    Copyleft 2013-2014, Pierre Cassat and contributors
+>    Copyleft (ↄ) 2013-2015 Pierre Cassat and contributors
 
 >    Licensed under the GPL Version 3 license.
 
