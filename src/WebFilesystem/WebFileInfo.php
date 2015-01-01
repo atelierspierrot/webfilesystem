@@ -1,17 +1,30 @@
 <?php
 /**
  * PHP WebFilesystem package of Les Ateliers Pierrot
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (ↄ) 2013-2015 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
  * Sources <http://github.com/atelierspierrot/webfilesystem>
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 namespace WebFilesystem;
 
-use WebFilesystem\WebFilesystem;
+use \WebFilesystem\WebFilesystem;
 
-use Library\Helper\Directory as DirectoryHelper;
+use \Library\Helper\Directory as DirectoryHelper;
 
 /**
  * Special web's version of the PHP >=5.1.2 standard class `SplFileInfo` <http://www.php.net/manual/en/class.splfileinfo.php>
@@ -29,10 +42,10 @@ class WebFileInfo extends \SplFileInfo
      */
     const STAT_SIZE_FIELD       = 256;
 
-	/**
-	 * The object flags, by default `STAT_DATETIME_FIELD | STAT_SIZE_FIELD`
-	 */
-	protected $flags;
+    /**
+     * The object flags, by default `STAT_DATETIME_FIELD | STAT_SIZE_FIELD`
+     */
+    protected $flags;
 
     /**
      * The absolute path of the root directory
@@ -46,15 +59,15 @@ class WebFileInfo extends \SplFileInfo
      */
     protected $web_path         = '';
 
-	/**
-	 * Construct a new WebFileInfo object
-	 *
-	 * To be valid for reading, the file `$root_dir / $file_name` must exist.
-	 *
-	 * @param string $file_name The path of the file
-	 * @param string $root_dir The absolute path of the root directory
-	 * @param int $flags The flags (object's constants) to set for the instance, default is `STAT_DATETIME_FIELD | STAT_SIZE_FIELD` 
-	 */
+    /**
+     * Construct a new WebFileInfo object
+     *
+     * To be valid for reading, the file `$root_dir / $file_name` must exist.
+     *
+     * @param string $file_name The path of the file
+     * @param string $root_dir The absolute path of the root directory
+     * @param int $flags The flags (object's constants) to set for the instance, default is `STAT_DATETIME_FIELD | STAT_SIZE_FIELD`
+     */
     public function __construct($file_name, $root_dir = null, $flags = 272)
     {
         $this->setFlags( $flags );
@@ -65,11 +78,12 @@ class WebFileInfo extends \SplFileInfo
         parent::__construct( DirectoryHelper::slashDirname($this->getRootDir()).$file_name );
     }
 
-	/**
-	 * Set the object's flags
-	 * @param int $flags The flags value to set (use the class's constants)
-	 * @return self The object itself is returned for method chaining
-	 */
+    /**
+     * Set the object's flags
+     *
+     * @param int $flags The flags value to set (use the class's constants)
+     * @return self The object itself is returned for method chaining
+     */
     public function setFlags($flags)
     {
         $this->flags = $flags;
@@ -78,6 +92,7 @@ class WebFileInfo extends \SplFileInfo
 
     /**
      * Gets the object's flags value
+     *
      * @return int The object's root directory
      */
     public function getFlags()
@@ -85,42 +100,46 @@ class WebFileInfo extends \SplFileInfo
         return $this->flags;
     }
 
-	/**
-	 * Gets the object extension (not defined before PHP 5.3.6)
-	 * @return string The extension string of the object if so
-	 */
-	public function getExtension()
-	{
+    /**
+     * Gets the object extension (not defined before PHP 5.3.6)
+     *
+     * @return string The extension string of the object if so
+     */
+    public function getExtension()
+    {
         return pathinfo($this->getBasename(), PATHINFO_EXTENSION);
-	}
+    }
 
-	/**
-	 * Gets the object realpath if found
-	 * @return string The absolute canonical path of the file in the server filesystem
-	 */
-	public function getRealPath()
-	{
-	    $path = parent::getRealPath();
-	    if (empty($path)) {
-	        $path = $this->getRootDir().$this->getFilename();
-	    }
-	    return $path;
-	}
+    /**
+     * Gets the object realpath if found
+     *
+     * @return string The absolute canonical path of the file in the server filesystem
+     */
+    public function getRealPath()
+    {
+        $path = parent::getRealPath();
+        if (empty($path)) {
+            $path = $this->getRootDir().$this->getFilename();
+        }
+        return $path;
+    }
 
-	/**
-	 * Gets the object file name as it was passed to the constructor (relative to `$root_dir`)
-	 * @return string The relative file path as it was passed to the constructor
-	 */
-	public function getFilename()
-	{
-	    return str_replace($this->getRootDir(), '', $this->getPathname());
-	}
+    /**
+     * Gets the object file name as it was passed to the constructor (relative to `$root_dir`)
+     *
+     * @return string The relative file path as it was passed to the constructor
+     */
+    public function getFilename()
+    {
+        return str_replace($this->getRootDir(), '', $this->getPathname());
+    }
 
-	/**
-	 * Sets the object's root directory
-	 * @param string $dir_name The absolute path of the root directory
-	 * @return self The object itself is returned for method chaining
-	 */
+    /**
+     * Sets the object's root directory
+     *
+     * @param string $dir_name The absolute path of the root directory
+     * @return self The object itself is returned for method chaining
+     */
     public function setRootDir($dir_name)
     {
         $this->root_dir = $dir_name;
@@ -130,6 +149,7 @@ class WebFileInfo extends \SplFileInfo
 
     /**
      * Gets the object's root directory
+     *
      * @return string The object's root directory
      */
     public function getRootDir()
@@ -137,11 +157,12 @@ class WebFileInfo extends \SplFileInfo
         return (!empty($this->root_dir) ? DirectoryHelper::slashDirname($this->root_dir) : '');
     }
 
-	/**
-	 * Sets the object web path (relative to `$root_dir`)
-	 * @param string $path The path to set, without the file name
-	 * @return self The object itself is returned for method chaining
-	 */
+    /**
+     * Sets the object web path (relative to `$root_dir`)
+     *
+     * @param string $path The path to set, without the file name
+     * @return self The object itself is returned for method chaining
+     */
     public function setWebPath($path)
     {
         $this->web_path = $path;
@@ -150,6 +171,7 @@ class WebFileInfo extends \SplFileInfo
 
     /**
      * Gets the object's web path
+     *
      * @return string The object's web path, without the file name
      */
     public function getWebPath()
@@ -161,6 +183,7 @@ class WebFileInfo extends \SplFileInfo
      * Gets the object's web real path (with the file name)
      *
      * This must returns a directly HTML writable directory or file path.
+     *
      * @return string The object's full file web path
      */
     public function getRealWebPath()
@@ -168,59 +191,64 @@ class WebFileInfo extends \SplFileInfo
         return $this->getWebPath().$this->getBasename();
     }
 
-	/**
-	 * Check if the object exists in the server filesystem
-	 * @return bool `true` if it exists, `false` otherwise
-	 */
-	public function exists()
-	{
-	    $path = $this->getRealPath();
-		return !empty($path) && @file_exists($path);
-	}
+    /**
+     * Check if the object exists in the server filesystem
+     *
+     * @return bool `true` if it exists, `false` otherwise
+     */
+    public function exists()
+    {
+        $path = $this->getRealPath();
+        return !empty($path) && @file_exists($path);
+    }
 
-	/**
-	 * Check if the object path (not the file itself but its container) exists in the server filesystem
-	 * @return bool `true` if it exists, `false` otherwise
-	 */
-	public function pathExists()
-	{
-	    $path = $this->getPath();
-		return !empty($path) && @file_exists($path) && @is_dir($path);
-	}
+    /**
+     * Check if the object path (not the file itself but its container) exists in the server filesystem
+     *
+     * @return bool `true` if it exists, `false` otherwise
+     */
+    public function pathExists()
+    {
+        $path = $this->getPath();
+        return !empty($path) && @file_exists($path) && @is_dir($path);
+    }
 
-	/**
-	 * Check if the object's root directory exists in the server filesystem
-	 * @return bool `true` if it exists, `false` otherwise
-	 */
-	public function rootDirExists()
-	{
-	    $path = $this->getRootDir();
-		return !empty($path) && @file_exists($path) && @is_dir($path);
-	}
+    /**
+     * Check if the object's root directory exists in the server filesystem
+     *
+     * @return bool `true` if it exists, `false` otherwise
+     */
+    public function rootDirExists()
+    {
+        $path = $this->getRootDir();
+        return !empty($path) && @file_exists($path) && @is_dir($path);
+    }
 
-	/**
-	 * Gets the directory name transformed to be displayed as a title
-	 * @return string The directory name transformed
-	 */
-	public function getHumanReadableFilename()
-	{
-		$file_name = $this->getBasename();
-		return WebFilesystem::getHumanReadableName($file_name);
-	}
+    /**
+     * Gets the directory name transformed to be displayed as a title
+     *
+     * @return string The directory name transformed
+     */
+    public function getHumanReadableFilename()
+    {
+        $file_name = $this->getBasename();
+        return WebFilesystem::getHumanReadableName($file_name);
+    }
 
-	/**
-	 * Get the PHP standard `stat()` function result
-	 *
-	 * The resulting table is returned with string indexes only
-	 * and few values transformed added depending on object's falgs.
-	 * @return array The result of the `stat()` function on the file, with string indexes only
-	 */
-	public function getStat()
-	{
-	    if ($this->exists()) {
-	        $flags = $this->getFlags();
-    	    $stats = @stat($this->getRealPath());
-    	    if ($stats) {
+    /**
+     * Get the PHP standard `stat()` function result
+     *
+     * The resulting table is returned with string indexes only
+     * and few values transformed added depending on object's flags.
+     *
+     * @return array The result of the `stat()` function on the file, with string indexes only
+     */
+    public function getStat()
+    {
+        if ($this->exists()) {
+            $flags = $this->getFlags();
+            $stats = @stat($this->getRealPath());
+            if ($stats) {
                 foreach($stats as $i=>$val) {
                     if (!is_string($i)) {
                         unset($stats[$i]);
@@ -236,50 +264,53 @@ class WebFileInfo extends \SplFileInfo
             return $stats;
         }
         return null;
-	}
-	
-	/**
-	 * Get the `MIME` type of the object
-	 * @return string The mime type string
-	 */
-	public function getMimeType()
-	{
-	    if ($this->exists()) {
-	        $finfo = new \finfo(FILEINFO_MIME_TYPE | FILEINFO_PRESERVE_ATIME);
+    }
+
+    /**
+     * Get the `MIME` type of the object
+     *
+     * @return string The mime type string
+     */
+    public function getMimeType()
+    {
+        if ($this->exists()) {
+            $finfo = new \finfo(FILEINFO_MIME_TYPE | FILEINFO_PRESERVE_ATIME);
             $mime = $finfo->file( $this->getRealPath() );
             return $mime;
         }
         return null;
-	}
-	
-	/**
-	 * Get the `MIME` charset of the object
-	 * @return string The mime charset string
-	 */
-	public function getCharset()
-	{
-	    if ($this->exists()) {
-	        $finfo = new \finfo(FILEINFO_MIME_ENCODING | FILEINFO_PRESERVE_ATIME);
+    }
+
+    /**
+     * Get the `MIME` charset of the object
+     *
+     * @return string The mime charset string
+     */
+    public function getCharset()
+    {
+        if ($this->exists()) {
+            $finfo = new \finfo(FILEINFO_MIME_ENCODING | FILEINFO_PRESERVE_ATIME);
             $mime = $finfo->file( $this->getRealPath() );
             return $mime;
         }
         return null;
-	}
-	
-	/**
-	 * Get the full `MIME` information of the object
-	 * @return string The full mime string like 'type ; charset'
-	 */
-	public function getMime()
-	{
-	    if ($this->exists()) {
-	        $finfo = new \finfo(FILEINFO_MIME | FILEINFO_PRESERVE_ATIME);
+    }
+
+    /**
+     * Get the full `MIME` information of the object
+     *
+     * @return string The full mime string like 'type ; charset'
+     */
+    public function getMime()
+    {
+        if ($this->exists()) {
+            $finfo = new \finfo(FILEINFO_MIME | FILEINFO_PRESERVE_ATIME);
             $mime = $finfo->file( $this->getRealPath() );
             return $mime;
         }
         return null;
-	}
-	
+    }
+
 }
 
 // Endfile

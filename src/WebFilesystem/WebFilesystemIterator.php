@@ -1,10 +1,23 @@
 <?php
 /**
  * PHP WebFilesystem package of Les Ateliers Pierrot
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (ↄ) 2013-2015 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
  * Sources <http://github.com/atelierspierrot/webfilesystem>
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
 namespace WebFilesystem;
@@ -61,6 +74,7 @@ class WebFilesystemIterator extends \FilesystemIterator implements
 
     /**
      * Overwriting the default `setFlags()` method to accept new flags
+     *
      * @param int $flags A set of object options'flags
      * @return self The object itself is returned for method chaining
      */
@@ -72,6 +86,7 @@ class WebFilesystemIterator extends \FilesystemIterator implements
 
     /**
      * Overwriting the default `getFlags()` method to accept new flags
+     *
      * @return int The current options'flags value for the object
      */
     public function getFlags()
@@ -79,12 +94,13 @@ class WebFilesystemIterator extends \FilesystemIterator implements
         return $this->flags;
     }
 
-	/**
+    /**
      * Overwriting the default `current()` method to return a `WebFileInfo` object if so
      *
      * If the flag `CURRENT_AS_WEBFILEINFO` is active, this will return a `WebFileInfo` object.
+     *
      * @return mixed The value of the current iteration, as a `WebFileInfo` object if requested or as the default result of the parent's method
-	 */
+     */
     public function current()
     {
         if ($this->getFlags() & WebFilesystemIterator::CURRENT_AS_WEBFILEINFO) {
@@ -104,12 +120,13 @@ class WebFilesystemIterator extends \FilesystemIterator implements
         return parent::current();
     }
 
-	/**
+    /**
      * Overwriting the default `rewind()` method to skip files beginning with a dot if so
      *
      * It the flag `SKIP_DOTTED` is active, this will skip files beginning with a dot.
+     *
      * @return void
-	 */
+     */
     public function rewind()
     {
         parent::rewind();
@@ -118,12 +135,13 @@ class WebFilesystemIterator extends \FilesystemIterator implements
         }
     }
 
-	/**
+    /**
      * Overwriting the default `next()` method to skip files beginning with a dot if so
      *
      * If the flag `SKIP_DOTTED` is active, this will skip files beginning with a dot.
+     *
      * @return void
-	 */
+    */
     public function next()
     {
         parent::next();
@@ -132,10 +150,11 @@ class WebFilesystemIterator extends \FilesystemIterator implements
         }
     }
 
-	/**
+    /**
      * Implementation of the `count()` method of the `Countable` interface
+     *
      * @return int The number of valid items of the object
-	 */
+     */
     public function count()
     {
         $count=0;
@@ -145,13 +164,14 @@ class WebFilesystemIterator extends \FilesystemIterator implements
         return $count;
     }
 
-	/**
+    /**
      * Make the iterator skip files beginning with a dot
      *
      * If the flag `SKIP_DOTTED` is active, this will skip files beginning with a dot and pass
      * to next item using the `next()` method if the object is still `valid()`.
+     *
      * @return void
-	 */
+     */
     protected function _skipDottedIfSo()
     {
         $_f = $this->getBasename();
