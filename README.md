@@ -1,6 +1,7 @@
 PHP Web Filesystem package
 ===========================
 
+[![documentation](http://img.ateliers-pierrot-static.fr/readthe-doc.png)](http://docs.ateliers-pierrot.fr/webfilesystem/)
 Extending the SPL file system to manage webserver based file system (such as assets).
 
 ## Inclusion & Usage
@@ -16,18 +17,21 @@ from Github.
 Then, to use the package classes, you just need to register the `WebFilesystem` namespace directory
 using the [SplClassLoader](https://gist.github.com/jwage/221634) or any other custom autoloader:
 
-    require_once '../src/SplClassLoader.php'; // if required, a copy is proposed in the package
-    $classLoader = new SplClassLoader('WebFilesystem', '/path/to/package/src');
-    $classLoader->register();
+```php
+require_once '../src/SplClassLoader.php'; // if required, a copy is proposed in the package
+$classLoader = new SplClassLoader('WebFilesystem', '/path/to/package/src');
+$classLoader->register();
+```
 
 If you use [Composer](http://getcomposer.org/) to manage your project's dependencies, including it
 is as easy as adding to your `composer.json` file:
 
-    "require": {
-        #...
-        "atelierspierrot/webfilesystem": "dev-master"
-    },
-
+```json
+"require": {
+    "your/deps": "*",
+    "atelierspierrot/webfilesystem": "dev-master"
+},
+```
 
 ## Documentation
 
@@ -61,4 +65,4 @@ at <http://docs.ateliers-pierrot.fr/webfilesystem/>.
 
 >    Les Ateliers Pierrot - Paris, France
 
->    <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
+>    <http://www.ateliers-pierrot.fr/> - <contact@ateliers-pierrot.fr>
