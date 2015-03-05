@@ -51,11 +51,11 @@ at <http://docs.ateliers-pierrot.fr/webfilesystem/>.
 
 >    http://github.com/atelierspierrot/webfilesystem
 
->    Copyleft (ↄ) 2013-2015 Pierre Cassat and contributors
+>    Copyright (c) 2013-2015 Pierre Cassat and contributors
 
->    Licensed under the GPL Version 3 license.
+>    Licensed under the Apache 2.0 license.
 
->    http://opensource.org/licenses/GPL-3.0
+>    http://www.apache.org/licenses/LICENSE-2.0
 
 >    ----
 

@@ -4,7 +4,7 @@
     "description": "Extending the SPL file system to manage webserver based file system (such as assets).",
     "keywords": ["file", "directory", "webserver", "spl"],
     "homepage": "http://github.com/atelierspierrot/webfilesystem",
-    "license": "GPL-3.0",
+    "license": "Apache-2.0",
     "authors": [{
         "name": "Les Ateliers Pierrot & contributors",
         "email": "contact@ateliers-pierrot.fr",
