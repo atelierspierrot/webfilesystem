@@ -16,14 +16,15 @@ vendor/*
 # this may be commented on the "dev" branch
 #phpdoc/*
 
+# the demonstration MUST NOT be on master as it is huge
+# this may be commented on the "dev" branch
+#demo/*
+
 # for developments ...
 # this may be commented on the "dev" branch
 #dev/*
 #build/*
 #src.*/*
-
-# this may be commented on the "demo" branch
-#demo/*
 
 # Hack to allow keeping an empty directory
 !.gitkeep
