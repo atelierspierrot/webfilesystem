@@ -36,4 +36,7 @@ go to <https://github.com/atelierspierrot/webfilesystem/commit/COMMIT_HASH>.
     * 7233534 - New 'base64content' method for 'WebImage' file type (Piero Wbmstr <me@e-piwi.fr>)
     * 249d208 - Full demo (Piero Wbmstr <me@e-piwi.fr>)
     * bda4369 - Documentation (Piero Wbmstr <me@e-piwi.fr>)
+
+* v1.0.0 (2013-11-09)
+
     * 4872d0f - Initial commit (Piero Wbmstr <me@e-piwi.fr>)
