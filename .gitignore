@@ -23,7 +23,7 @@ vendor/*
 #src.*/*
 
 # this may be commented on the "demo" branch
-demo/*
+#demo/*
 
 # Hack to allow keeping an empty directory
 !.gitkeep
