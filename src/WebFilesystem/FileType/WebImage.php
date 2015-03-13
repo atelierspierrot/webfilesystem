@@ -28,6 +28,7 @@ use WebFilesystem\WebFileInfo;
 use Library\Helper\Directory as DirectoryHelper;
 
 /**
+ * @author  piwi <me@e-piwi.fr>
  */
 class WebImage extends WebFileInfo
 {

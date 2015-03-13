@@ -27,6 +27,8 @@ use Library\Helper\Directory as DirectoryHelper;
 
 /**
  * Special web's version of the PHP >=5.3 standard class `FilesystemIterator` <http://www.php.net/manual/en/class.splfileinfo.php>
+ *
+ * @author  piwi <me@e-piwi.fr>
  */
 class WebFilesystemIterator extends \FilesystemIterator implements 
     \SeekableIterator, 

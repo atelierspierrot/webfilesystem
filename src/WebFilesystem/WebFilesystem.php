@@ -24,6 +24,8 @@ namespace WebFilesystem;
 
 /**
  * Commons static functions for the whole package
+ *
+ * @author  piwi <me@e-piwi.fr>
  */
 class WebFilesystem
 {
