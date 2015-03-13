@@ -1,7 +1,8 @@
 PHP Web Filesystem package
 ===========================
 
-[![documentation](http://img.ateliers-pierrot-static.fr/readthe-doc.png)](http://docs.ateliers-pierrot.fr/webfilesystem/)
+[![demonstration](http://img.ateliers-pierrot-static.fr/see-the-demo.svg)](http://sites.ateliers-pierrot.fr/webfilesystem/)
+[![documentation](http://img.ateliers-pierrot-static.fr/read-the-doc.svg)](http://docs.ateliers-pierrot.fr/webfilesystem/)
 Extending the SPL file system to manage webserver based file system (such as assets).
 
 Installation
