@@ -29,6 +29,7 @@ use \Library\Helper\Regex as RegexHelper;
 use \Patterns\Abstracts\AbstractStaticCreator;
 
 /**
+ * @author  piwi <me@e-piwi.fr>
  */
 class Finder
     extends AbstractStaticCreator

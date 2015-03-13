@@ -26,6 +26,7 @@ use WebFilesystem\WebFilesystem;
 use WebFilesystem\WebFilesystemIterator;
 
 /**
+ * @author  piwi <me@e-piwi.fr>
  */
 class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements 
     \SeekableIterator,

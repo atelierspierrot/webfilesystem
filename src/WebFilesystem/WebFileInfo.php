@@ -28,6 +28,8 @@ use \Library\Helper\Directory as DirectoryHelper;
 
 /**
  * Special web's version of the PHP >=5.1.2 standard class `SplFileInfo` <http://www.php.net/manual/en/class.splfileinfo.php>
+ * 
+ * @author  piwi <me@e-piwi.fr>
  */
 class WebFileInfo extends \SplFileInfo
 {
