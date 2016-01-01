@@ -2,7 +2,7 @@
 /**
  * This file is part of the WebFilesystem package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,10 +30,10 @@ use Library\Helper\Directory as DirectoryHelper;
  *
  * @author  piwi <me@e-piwi.fr>
  */
-class WebFilesystemIterator extends \FilesystemIterator implements 
-    \SeekableIterator, 
-    \Traversable, 
-    \Iterator, 
+class WebFilesystemIterator extends \FilesystemIterator implements
+    \SeekableIterator,
+    \Traversable,
+    \Iterator,
     \Countable
 {
 
@@ -68,7 +68,7 @@ class WebFilesystemIterator extends \FilesystemIterator implements
     {
         $this->original_path = $path;
         parent::__construct($path, $flags);
-        $this->setFlags( $flags );
+        $this->setFlags($flags);
         if ($this->valid() && ($this->getFlags() & WebFilesystemIterator::SKIP_DOTTED)) {
             $this->_skipDottedIfSo();
         }
@@ -106,7 +106,7 @@ class WebFilesystemIterator extends \FilesystemIterator implements
     public function current()
     {
         if ($this->getFlags() & WebFilesystemIterator::CURRENT_AS_WEBFILEINFO) {
-/*
+            /*
             if ($this->isLink()) {
                 return new WebFileInfo($this->getPathname());
             } else {
@@ -181,7 +181,4 @@ class WebFilesystemIterator extends \FilesystemIterator implements
             $this->next();
         }
     }
-
 }
-
-// Endfile
