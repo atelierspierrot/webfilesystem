@@ -2,7 +2,7 @@
 /**
  * This file is part of the WebFilesystem package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -461,10 +461,11 @@ class Finder
         }
         $ok = false;
         foreach ($extension as $_ext) {
-            if (strtolower($this->iterator->current()->getExtension())==strtolower($_ext))
+            if (strtolower($this->iterator->current()->getExtension())==strtolower($_ext)) {
                 $ok = true;
+            }
         }
-        return ($this->iterator->current()->isFile() && 
+        return ($this->iterator->current()->isFile() &&
             WebFilesystem::isCommonFile($this->iterator->current()->getRealPath()) &&
             $ok);
     }
@@ -472,28 +473,28 @@ class Finder
     public function isFile()
     {
         $this->getIterator();
-        return ($this->iterator->current()->isFile() && 
+        return ($this->iterator->current()->isFile() &&
             WebFilesystem::isCommonFile($this->iterator->current()->getRealPath()));
     }
 
     public function isDir()
     {
         $this->getIterator();
-        return ($this->iterator->current()->isDir() && 
+        return ($this->iterator->current()->isDir() &&
             WebFilesystem::isCommonFile($this->iterator->current()->getRealPath()));
     }
 
     public function isLink()
     {
         $this->getIterator();
-        return ($this->iterator->current()->isLink() && 
+        return ($this->iterator->current()->isLink() &&
             WebFilesystem::isCommonFile($this->iterator->current()->getRealPath()));
     }
 
     public function isImage()
     {
         $this->getIterator();
-        return ($this->iterator->current()->isFile() && 
+        return ($this->iterator->current()->isFile() &&
             WebFilesystem::isCommonFile($this->iterator->current()->getRealPath()) &&
             WebFilesystem::isCommonImage($this->iterator->current()->getRealPath()));
     }
@@ -501,7 +502,7 @@ class Finder
     public function isVideo()
     {
         $this->getIterator();
-        return ($this->iterator->current()->isFile() && 
+        return ($this->iterator->current()->isFile() &&
             WebFilesystem::isCommonFile($this->iterator->current()->getRealPath()) &&
             WebFilesystem::isCommonVideo($this->iterator->current()->getRealPath()));
     }
@@ -509,7 +510,7 @@ class Finder
     public function isDotFile()
     {
         $this->getIterator();
-        return ($this->iterator->current()->isFile() && 
+        return ($this->iterator->current()->isFile() &&
             WebFilesystem::isDotFile($this->iterator->current()->getRealPath()));
     }
 
@@ -562,7 +563,9 @@ class Finder
 
     protected function _find()
     {
-        if ($this->isInited()) return;
+        if ($this->isInited()) {
+            return;
+        }
         $this->reset();
         foreach ($this->directories as $dir) {
             $this->_findByDirectory(
@@ -660,7 +663,4 @@ class Finder
             $this->_findByDirectory($file->getRealPath());
         }
     }
-            
 }
-
-// Endfile

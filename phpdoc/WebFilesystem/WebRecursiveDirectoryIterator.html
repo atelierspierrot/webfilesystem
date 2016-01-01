@@ -12,6 +12,9 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/typeahead.min.js"></script>
         <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -73,7 +76,8 @@
 
     <p>    class
     <strong>WebRecursiveDirectoryIterator</strong>        extends <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>        implements
-        <a href="http://php.net/SeekableIterator"><abbr title="SeekableIterator">SeekableIterator</abbr></a>, <a href="http://php.net/Traversable"><abbr title="Traversable">Traversable</abbr></a>, <a href="http://php.net/Iterator"><abbr title="Iterator">Iterator</abbr></a>, <a href="http://php.net/RecursiveIterator"><abbr title="RecursiveIterator">RecursiveIterator</abbr></a>, <a href="http://php.net/Countable"><abbr title="Countable">Countable</abbr></a></p>
+        <a target="_blank" href="http://php.net/SeekableIterator"><abbr title="SeekableIterator">SeekableIterator</abbr></a>, <a target="_blank" href="http://php.net/Traversable"><abbr title="Traversable">Traversable</abbr></a>, <a target="_blank" href="http://php.net/Iterator"><abbr title="Iterator">Iterator</abbr></a>, <a target="_blank" href="http://php.net/RecursiveIterator"><abbr title="RecursiveIterator">RecursiveIterator</abbr></a>, <a target="_blank" href="http://php.net/Countable"><abbr title="Countable">Countable</abbr></a>
+</p>
 
     
     
@@ -104,34 +108,45 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $path, int $flags = 16432, <abbr title="WebFilesystem\callback">callback</abbr> $file_validation_callback = null, <abbr title="WebFilesystem\callback">callback</abbr> $directory_validation_callback = null)
+                    <a href="#method___construct">__construct</a>(
+    string $path, 
+    int $flags = 16432, 
+    <abbr title="WebFilesystem\callback">callback</abbr> $file_validation_callback = null, 
+    <abbr title="WebFilesystem\callback">callback</abbr> $directory_validation_callback = null)
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
+                    
+    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setFlags">setFlags</a>(int $flags = null)
+                    <a href="#method_setFlags">setFlags</a>(
+    int $flags = null)
                                             <p>Overwriting the default <code>setFlags()</code> method to accept new flags</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../WebFilesystem/WebFilesystemIterator.html#method_setFlags"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../WebFilesystem/WebFilesystemIterator.html#method_setFlags"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    
+    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFlags">getFlags</a>()
                                             <p>Overwriting the default <code>getFlags()</code> method to accept new flags</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../WebFilesystem/WebFilesystemIterator.html#method_getFlags"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../WebFilesystem/WebFilesystemIterator.html#method_getFlags"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    mixed
+                    
+    mixed
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_current">current</a>()
@@ -140,7 +155,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_rewind">rewind</a>()
@@ -149,7 +165,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_next">next</a>()
@@ -158,25 +175,30 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    
+    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_count">count</a>()
                                             <p>Implementation of the <code>count()</code> method of the <code>Countable</code> interface</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../WebFilesystem/WebFilesystemIterator.html#method_count"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../WebFilesystem/WebFilesystemIterator.html#method_count"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
+                    
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setFileClass">setFileClass</a>(string $class_name = null)
+                    <a href="#method_setFileClass">setFileClass</a>(
+    string $class_name = null)
                                             <p>Set a class name to build each item</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFileClass">getFileClass</a>()
@@ -185,7 +207,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
+                    
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_setFileValidationCallback">setFileValidationCallback</a>($callback)
@@ -194,7 +217,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="WebFilesystem\callback">callback</abbr>
+                    
+    <abbr title="WebFilesystem\callback">callback</abbr>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFileValidationCallback">getFileValidationCallback</a>()
@@ -203,7 +227,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
+                    
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_setDirectoryValidationCallback">setDirectoryValidationCallback</a>($callback)
@@ -212,7 +237,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="WebFilesystem\callback">callback</abbr>
+                    
+    <abbr title="WebFilesystem\callback">callback</abbr>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getDirectoryValidationCallback">getDirectoryValidationCallback</a>()
@@ -221,7 +247,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="WebFilesystem\class">class</abbr>
+                    
+    <abbr title="WebFilesystem\class">class</abbr>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getChildren">getChildren</a>()
@@ -230,7 +257,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    null|string
+                    
+    null|string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getSubPath">getSubPath</a>()
@@ -239,7 +267,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    null|string
+                    
+    null|string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getSubPathname">getSubPathname</a>()
@@ -248,7 +277,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_hasChildren">hasChildren</a>($allow_links = false)
@@ -257,7 +287,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_seek">seek</a>($position)
@@ -266,7 +297,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    
+    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_recursiveCount">recursiveCount</a>()
@@ -281,9 +313,14 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 67</div>
+        <div class="location">at line 68</div>
         <code>                    
-    <strong>__construct</strong>(string $path, int $flags = 16432, <abbr title="WebFilesystem\callback">callback</abbr> $file_validation_callback = null, <abbr title="WebFilesystem\callback">callback</abbr> $directory_validation_callback = null)</code>
+    
+    <strong>__construct</strong>(
+    string $path, 
+    int $flags = 16432, 
+    <abbr title="WebFilesystem\callback">callback</abbr> $file_validation_callback = null, 
+    <abbr title="WebFilesystem\callback">callback</abbr> $directory_validation_callback = null)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -291,22 +328,26 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$path</td>
                 <td>The path of the new filesystem object</td>
             </tr>
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$flags</td>
                 <td>The object options'flags value</td>
             </tr>
                     <tr>
-                <td><abbr title="WebFilesystem\callback">callback</abbr></td>
+                <td>
+    <abbr title="WebFilesystem\callback">callback</abbr></td>
                 <td>$file_validation_callback</td>
                 <td>A callback to validate each file item</td>
             </tr>
                     <tr>
-                <td><abbr title="WebFilesystem\callback">callback</abbr></td>
+                <td>
+    <abbr title="WebFilesystem\callback">callback</abbr></td>
                 <td>$directory_validation_callback</td>
                 <td>A callback to validate each directory item</td>
             </tr>
@@ -321,9 +362,12 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setFlags">
-        <div class="location">in <a href="../WebFilesystem/WebFilesystemIterator.html#method_setFlags"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a> at line 81</div>
-        <code>                    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
-    <strong>setFlags</strong>(int $flags = null)</code>
+        <div class="location">in 
+    <a href="../WebFilesystem/WebFilesystemIterator.html#method_setFlags"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a> at line 83</div>
+        <code>                    
+    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
+    <strong>setFlags</strong>(
+    int $flags = null)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -333,7 +377,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$flags</td>
                 <td>A set of object options'flags</td>
             </tr>
@@ -344,7 +389,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></td>
+            <td>
+    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></td>
             <td>The object itself is returned for method chaining</td>
         </tr>
     </table>
@@ -357,8 +403,10 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFlags">
-        <div class="location">in <a href="../WebFilesystem/WebFilesystemIterator.html#method_getFlags"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a> at line 92</div>
-        <code>                    int
+        <div class="location">in 
+    <a href="../WebFilesystem/WebFilesystemIterator.html#method_getFlags"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a> at line 94</div>
+        <code>                    
+    int
     <strong>getFlags</strong>()</code>
     </h3>
     <div class="details">
@@ -370,7 +418,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>
+    int</td>
             <td>The current options'flags value for the object</td>
         </tr>
     </table>
@@ -383,8 +432,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">at line 221</div>
-        <code>                    mixed
+        <div class="location">at line 222</div>
+        <code>                    
+    mixed
     <strong>current</strong>()</code>
     </h3>
     <div class="details">
@@ -396,9 +446,9 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed</td>
-            <td>The result of the parent <code>current()</code> method if the item is a directory or no
-             specific class is set ; an instance of the file class option otherwise</td>
+            <td>
+    mixed</td>
+            <td>The value of the current iteration, as a <code>WebFileInfo</code> object if requested or as the default result of the parent's method</td>
         </tr>
     </table>
 
@@ -407,11 +457,11 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
                 <td>if the file class defined can't be found</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/LogicException"><abbr title="LogicException">LogicException</abbr></a></td>
                 <td>if the file class doesn't extend <code>WebFilesystem\WebFileInfo</code></td>
             </tr>
             </table>
@@ -423,8 +473,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">at line 250</div>
-        <code>                    void
+        <div class="location">at line 251</div>
+        <code>                    
+    void
     <strong>rewind</strong>()</code>
     </h3>
     <div class="details">
@@ -436,7 +487,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -450,8 +502,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">at line 265</div>
-        <code>                    void
+        <div class="location">at line 266</div>
+        <code>                    
+    void
     <strong>next</strong>()</code>
     </h3>
     <div class="details">
@@ -463,7 +516,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -477,8 +531,10 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_count">
-        <div class="location">in <a href="../WebFilesystem/WebFilesystemIterator.html#method_count"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a> at line 158</div>
-        <code>                    int
+        <div class="location">in 
+    <a href="../WebFilesystem/WebFilesystemIterator.html#method_count"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a> at line 160</div>
+        <code>                    
+    int
     <strong>count</strong>()</code>
     </h3>
     <div class="details">
@@ -490,7 +546,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>
+    int</td>
             <td>The number of valid items of the object</td>
         </tr>
     </table>
@@ -503,9 +560,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setFileClass">
-        <div class="location">at line 80</div>
-        <code>                    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
-    <strong>setFileClass</strong>(string $class_name = null)</code>
+        <div class="location">at line 81</div>
+        <code>                    
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
+    <strong>setFileClass</strong>(
+    string $class_name = null)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -515,7 +574,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$class_name</td>
                 <td>The class name to use ; the class must exist and be callable</td>
             </tr>
@@ -526,7 +586,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a></td>
+            <td>
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a></td>
             <td>The object itself is returned for method chaining</td>
         </tr>
     </table>
@@ -539,8 +600,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFileClass">
-        <div class="location">at line 91</div>
-        <code>                    string
+        <div class="location">at line 92</div>
+        <code>                    
+    string
     <strong>getFileClass</strong>()</code>
     </h3>
     <div class="details">
@@ -552,7 +614,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The class name to use ; the class must exist and be callable</td>
         </tr>
     </table>
@@ -565,8 +628,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setFileValidationCallback">
-        <div class="location">at line 102</div>
-        <code>                    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
+        <div class="location">at line 103</div>
+        <code>                    
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
     <strong>setFileValidationCallback</strong>($callback)</code>
     </h3>
     <div class="details">
@@ -589,7 +653,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a></td>
+            <td>
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a></td>
             <td>The object itself is returned for method chaining</td>
         </tr>
     </table>
@@ -602,8 +667,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFileValidationCallback">
-        <div class="location">at line 113</div>
-        <code>                    <abbr title="WebFilesystem\callback">callback</abbr>
+        <div class="location">at line 114</div>
+        <code>                    
+    <abbr title="WebFilesystem\callback">callback</abbr>
     <strong>getFileValidationCallback</strong>()</code>
     </h3>
     <div class="details">
@@ -615,7 +681,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="WebFilesystem\callback">callback</abbr></td>
+            <td>
+    <abbr title="WebFilesystem\callback">callback</abbr></td>
             <td>the callback to validate each file item</td>
         </tr>
     </table>
@@ -628,8 +695,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setDirectoryValidationCallback">
-        <div class="location">at line 124</div>
-        <code>                    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
+        <div class="location">at line 125</div>
+        <code>                    
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a>
     <strong>setDirectoryValidationCallback</strong>($callback)</code>
     </h3>
     <div class="details">
@@ -652,7 +720,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a></td>
+            <td>
+    <a href="../WebFilesystem/WebRecursiveDirectoryIterator.html"><abbr title="WebFilesystem\WebRecursiveDirectoryIterator">WebRecursiveDirectoryIterator</abbr></a></td>
             <td>The object itself is returned for method chaining</td>
         </tr>
     </table>
@@ -665,8 +734,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDirectoryValidationCallback">
-        <div class="location">at line 135</div>
-        <code>                    <abbr title="WebFilesystem\callback">callback</abbr>
+        <div class="location">at line 136</div>
+        <code>                    
+    <abbr title="WebFilesystem\callback">callback</abbr>
     <strong>getDirectoryValidationCallback</strong>()</code>
     </h3>
     <div class="details">
@@ -678,7 +748,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="WebFilesystem\callback">callback</abbr></td>
+            <td>
+    <abbr title="WebFilesystem\callback">callback</abbr></td>
             <td>The callback to validate each directory item</td>
         </tr>
     </table>
@@ -691,8 +762,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getChildren">
-        <div class="location">at line 145</div>
-        <code>                    <abbr title="WebFilesystem\class">class</abbr>
+        <div class="location">at line 146</div>
+        <code>                    
+    <abbr title="WebFilesystem\class">class</abbr>
     <strong>getChildren</strong>()</code>
     </h3>
     <div class="details">
@@ -704,7 +776,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="WebFilesystem\class">class</abbr></td>
+            <td>
+    <abbr title="WebFilesystem\class">class</abbr></td>
             <td>A new object with the same options as <code>self</code></td>
         </tr>
     </table>
@@ -717,8 +790,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getSubPath">
-        <div class="location">at line 161</div>
-        <code>                    null|string
+        <div class="location">at line 162</div>
+        <code>                    
+    null|string
     <strong>getSubPath</strong>()</code>
     </h3>
     <div class="details">
@@ -730,7 +804,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>null|string</td>
+            <td>
+    null|string</td>
             <td>The path of the current sub-directory</td>
         </tr>
     </table>
@@ -743,8 +818,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getSubPathname">
-        <div class="location">at line 176</div>
-        <code>                    null|string
+        <div class="location">at line 177</div>
+        <code>                    
+    null|string
     <strong>getSubPathname</strong>()</code>
     </h3>
     <div class="details">
@@ -756,7 +832,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>null|string</td>
+            <td>
+    null|string</td>
             <td>The pathname of the current sub-directory</td>
         </tr>
     </table>
@@ -769,8 +846,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hasChildren">
-        <div class="location">at line 189</div>
-        <code>                    bool
+        <div class="location">at line 190</div>
+        <code>                    
+    bool
     <strong>hasChildren</strong>($allow_links = false)</code>
     </h3>
     <div class="details">
@@ -793,7 +871,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td><code>true</code> if the current item seems to be a directory, <code>false</code> otherwise</td>
         </tr>
     </table>
@@ -806,8 +885,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_seek">
-        <div class="location">at line 200</div>
-        <code>                    void
+        <div class="location">at line 201</div>
+        <code>                    
+    void
     <strong>seek</strong>($position)</code>
     </h3>
     <div class="details">
@@ -830,7 +910,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -841,7 +922,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfBoundsException"><abbr title="OutOfBoundsException">OutOfBoundsException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/OutOfBoundsException"><abbr title="OutOfBoundsException">OutOfBoundsException</abbr></a></td>
                 <td>if the provided position doesn't exist</td>
             </tr>
             </table>
@@ -853,8 +934,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_recursiveCount">
-        <div class="location">at line 278</div>
-        <code>                    int
+        <div class="location">at line 279</div>
+        <code>                    
+    int
     <strong>recursiveCount</strong>()</code>
     </h3>
     <div class="details">
@@ -866,7 +948,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>
+    int</td>
             <td>The count of the object valid items and sub-items recursively</td>
         </tr>
     </table>

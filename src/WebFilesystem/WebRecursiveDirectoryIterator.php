@@ -2,7 +2,7 @@
 /**
  * This file is part of the WebFilesystem package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ use WebFilesystem\WebFilesystemIterator;
 /**
  * @author  piwi <me@e-piwi.fr>
  */
-class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements 
+class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
     \SeekableIterator,
     \Traversable,
     \Iterator,
@@ -67,9 +67,9 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
      */
     public function __construct($path, $flags = 16432, $file_validation_callback = null, $directory_validation_callback = null)
     {
-        parent::__construct( $path, $flags );
-        $this->setFileValidationCallback( $file_validation_callback );
-        $this->setDirectoryValidationCallback( $directory_validation_callback );
+        parent::__construct($path, $flags);
+        $this->setFileValidationCallback($file_validation_callback);
+        $this->setDirectoryValidationCallback($directory_validation_callback);
     }
 
     /**
@@ -201,7 +201,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
     public function seek($position)
     {
         $this->rewind();
-        for($i=0; $i<$position; $i++) {
+        for ($i=0; $i<$position; $i++) {
             $this->next();
         }
         if (!$this->valid()) {
@@ -238,7 +238,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
         $_cls = $this->getFileClass();
         $realpath = $this->getRealPath();
         $path = $this->getPathname();
-        return new $_cls( $path, str_replace($path, '', $realpath) );
+        return new $_cls($path, str_replace($path, '', $realpath));
     }
 
     /**
@@ -312,10 +312,9 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
     {
         if ($this->valid()) {
             if ($this->hasChildren() && $this->getDirectoryValidationCallback()) {
-                $this->_validate( $this->getDirectoryValidationCallback() );
-            }
-            elseif (is_file($this->getRealPath()) && $this->getFileValidationCallback()) {
-                $this->_validate( $this->getFileValidationCallback() );
+                $this->_validate($this->getDirectoryValidationCallback());
+            } elseif (is_file($this->getRealPath()) && $this->getFileValidationCallback()) {
+                $this->_validate($this->getFileValidationCallback());
             }
         }
     }
@@ -361,7 +360,7 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
                 if (false===$result) {
                     $this->next();
                 }
-            } catch(\Exception $e) {
+            } catch (\Exception $e) {
                 throw new \BadFunctionCallException(
                     sprintf('Function named "%s" used as callback sent an exception with argument "%s"!', $callback, $entry),
                     0, $e
@@ -373,7 +372,4 @@ class WebRecursiveDirectoryIterator extends WebFilesystemIterator implements
             );
         }
     }
-
 }
-
-// Endfile

@@ -2,7 +2,7 @@
 /**
  * This file is part of the WebFilesystem package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,6 @@
 namespace WebFilesystem;
 
 use \WebFilesystem\WebFilesystem;
-
 use \Library\Helper\Directory as DirectoryHelper;
 
 /**
@@ -72,12 +71,12 @@ class WebFileInfo extends \SplFileInfo
      */
     public function __construct($file_name, $root_dir = null, $flags = 272)
     {
-        $this->setFlags( $flags );
-        $this->setWebPath( dirname($file_name) );
+        $this->setFlags($flags);
+        $this->setWebPath(dirname($file_name));
         if (!is_null($root_dir)) {
-            $this->setRootDir( $root_dir );
+            $this->setRootDir($root_dir);
         }
-        parent::__construct( DirectoryHelper::slashDirname($this->getRootDir()).$file_name );
+        parent::__construct(DirectoryHelper::slashDirname($this->getRootDir()).$file_name);
     }
 
     /**
@@ -251,7 +250,7 @@ class WebFileInfo extends \SplFileInfo
             $flags = $this->getFlags();
             $stats = @stat($this->getRealPath());
             if ($stats) {
-                foreach($stats as $i=>$val) {
+                foreach ($stats as $i=>$val) {
                     if (!is_string($i)) {
                         unset($stats[$i]);
                     } else {
@@ -277,7 +276,7 @@ class WebFileInfo extends \SplFileInfo
     {
         if ($this->exists()) {
             $finfo = new \finfo(FILEINFO_MIME_TYPE | FILEINFO_PRESERVE_ATIME);
-            $mime = $finfo->file( $this->getRealPath() );
+            $mime = $finfo->file($this->getRealPath());
             return $mime;
         }
         return null;
@@ -292,7 +291,7 @@ class WebFileInfo extends \SplFileInfo
     {
         if ($this->exists()) {
             $finfo = new \finfo(FILEINFO_MIME_ENCODING | FILEINFO_PRESERVE_ATIME);
-            $mime = $finfo->file( $this->getRealPath() );
+            $mime = $finfo->file($this->getRealPath());
             return $mime;
         }
         return null;
@@ -307,12 +306,9 @@ class WebFileInfo extends \SplFileInfo
     {
         if ($this->exists()) {
             $finfo = new \finfo(FILEINFO_MIME | FILEINFO_PRESERVE_ATIME);
-            $mime = $finfo->file( $this->getRealPath() );
+            $mime = $finfo->file($this->getRealPath());
             return $mime;
         }
         return null;
     }
-
 }
-
-// Endfile

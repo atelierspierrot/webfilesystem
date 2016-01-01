@@ -12,6 +12,9 @@
         <script src="../../js/bootstrap.min.js"></script>
         <script src="../../js/typeahead.min.js"></script>
         <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -73,7 +76,8 @@
     </div>
 
     <p>    class
-    <strong>WebImage</strong>        extends <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></p>
+    <strong>WebImage</strong>        extends <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+</p>
 
     
     
@@ -105,6 +109,7 @@
                     <tr>
                 <td class="type" id="property_THUMBS_PATH">
                     static                                                            
+    
                 </td>
                 <td>$THUMBS_PATH</td>
                 <td class="last">Thumbs directory path mask</td>
@@ -113,6 +118,7 @@
                     <tr>
                 <td class="type" id="property_iptc_fields">
                     static                                                            
+    
                 </td>
                 <td>$iptc_fields</td>
                 <td class="last">List of all IPTC field names</td>
@@ -127,105 +133,134 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $path, string $root_dir = null, string $file_name = null, bool $must_exist = true)
+                    <a href="#method___construct">__construct</a>(
+    string $path, 
+    string $root_dir = null, 
+    string $file_name = null, 
+    bool $must_exist = true)
                                             <p>Construct a new myDirectory object</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+                    
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setFlags">setFlags</a>(int $flags)
+                    <a href="#method_setFlags">setFlags</a>(
+    int $flags)
                                             <p>Set the object's flags</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_setFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_setFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    
+    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFlags">getFlags</a>()
                                             <p>Gets the object's flags value</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getExtension">getExtension</a>()
                                             <p>Gets the object extension (not defined before PHP 5.3.6)</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getExtension"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getExtension"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getRealPath">getRealPath</a>()
                                             <p>Gets the object realpath if found</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getRealPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getRealPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFilename">getFilename</a>()
                                             <p>Gets the object file name as it was passed to the constructor (relative to <code>$root_dir</code>)</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+                    
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setRootDir">setRootDir</a>(string $dir_name)
+                    <a href="#method_setRootDir">setRootDir</a>(
+    string $dir_name)
                                             <p>Sets the object's root directory</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_setRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_setRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getRootDir">getRootDir</a>()
                                             <p>Gets the object's root directory</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+                    
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setWebPath">setWebPath</a>(string $path)
+                    <a href="#method_setWebPath">setWebPath</a>(
+    string $path)
                                             <p>Sets the object web path (relative to <code>$root_dir</code>)</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_setWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_setWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getWebPath">getWebPath</a>()
                                             <p>Gets the object's web path</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getRealWebPath">getRealWebPath</a>()
                                             <p>Gets the object's web real path (with the file name)</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getRealWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getRealWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_exists">exists</a>()
@@ -234,79 +269,96 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_pathExists">pathExists</a>()
                                             <p>Check if the object path (not the file itself but its container) exists in the server filesystem</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_pathExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_pathExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_rootDirExists">rootDirExists</a>()
                                             <p>Check if the object's root directory exists in the server filesystem</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_rootDirExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_rootDirExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getHumanReadableFilename">getHumanReadableFilename</a>()
                                             <p>Gets the directory name transformed to be displayed as a title</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getHumanReadableFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getHumanReadableFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    
+    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getStat">getStat</a>()
                                             <p>Get the PHP standard <code>stat()</code> function result</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getStat"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getStat"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getMimeType">getMimeType</a>()
                                             <p>Get the <code>MIME</code> type of the object</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getMimeType"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getMimeType"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getCharset">getCharset</a>()
                                             <p>Get the <code>MIME</code> charset of the object</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getCharset"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getCharset"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getMime">getMime</a>()
                                             <p>Get the full <code>MIME</code> information of the object</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../WebFilesystem/WebFileInfo.html#method_getMime"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getMime"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+                    
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setThumbFilename">setThumbFilename</a>(string $file_name)
+                    <a href="#method_setThumbFilename">setThumbFilename</a>(
+    string $file_name)
                                             <p>Sets the object thumb file name</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getThumbFilename">getThumbFilename</a>()
@@ -315,7 +367,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getThumbBasename">getThumbBasename</a>()
@@ -324,16 +377,19 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+                    
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setThumbRootDir">setThumbRootDir</a>(string $path)
+                    <a href="#method_setThumbRootDir">setThumbRootDir</a>(
+    string $path)
                                             <p>Sets the object thumb root directory</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getThumbRootDir">getThumbRootDir</a>()
@@ -342,16 +398,19 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+                    
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setThumbPath">setThumbPath</a>(string $path)
+                    <a href="#method_setThumbPath">setThumbPath</a>(
+    string $path)
                                             <p>Sets the object thumb web path</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getThumbPath">getThumbPath</a>()
@@ -360,7 +419,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getThumbPathname">getThumbPathname</a>()
@@ -369,7 +429,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getThumbRealPath">getThumbRealPath</a>()
@@ -379,7 +440,8 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getThumbWebPath">getThumbWebPath</a>()
@@ -388,7 +450,8 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getThumbRealWebPath">getThumbRealWebPath</a>()
@@ -398,7 +461,8 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    
+    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getInfos">getInfos</a>()
@@ -407,7 +471,8 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    
+    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getImageInfos">getImageInfos</a>()
@@ -416,7 +481,8 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    
+    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getIptcInfos">getIptcInfos</a>()
@@ -425,7 +491,8 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    
+    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getExifInfos">getExifInfos</a>()
@@ -434,7 +501,8 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_thumbExists">thumbExists</a>()
@@ -444,6 +512,7 @@ This returns a directly HTML writable directory or file path</p>                
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isImage">isImage</a>()
@@ -453,6 +522,7 @@ This returns a directly HTML writable directory or file path</p>                
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;
+    
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getGps">getGps</a>($exifCoord, $hemi)
@@ -461,34 +531,41 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;float
+                    static&nbsp;
+    float
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_gps2Num">gps2Num</a>(int $coordPart)
+                    <a href="#method_gps2Num">gps2Num</a>(
+    int $coordPart)
                                             <p>Returns a transformed GPS coordinate in a numeric floated value</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;mixed
+                    static&nbsp;
+    mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getDateFromExif">getDateFromExif</a>(int $date)
+                    <a href="#method_getDateFromExif">getDateFromExif</a>(
+    int $date)
                                             <p>Returns the transformed date field form EXIF info to SQL DateTime format <code>AAAA-MM-DD HH:ii:ss</code></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getBase64Content">getBase64Content</a>(bool $to_href = false)
+                    <a href="#method_getBase64Content">getBase64Content</a>(
+    bool $to_href = false)
                                             <p>Get the <code>base64</code> encoded image content</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    null|int
+                    
+    null|int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getHeight">getHeight</a>()
@@ -497,7 +574,8 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    null|int
+                    
+    null|int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getWidth">getWidth</a>()
@@ -514,7 +592,12 @@ This returns a directly HTML writable directory or file path</p>                
                     <h3 id="method___construct">
         <div class="location">at line 103</div>
         <code>                    
-    <strong>__construct</strong>(string $path, string $root_dir = null, string $file_name = null, bool $must_exist = true)</code>
+    
+    <strong>__construct</strong>(
+    string $path, 
+    string $root_dir = null, 
+    string $file_name = null, 
+    bool $must_exist = true)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -524,22 +607,26 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$path</td>
                 <td>The path of the file</td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$root_dir</td>
                 <td>The absolute path of the root directory</td>
             </tr>
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$file_name</td>
-                <td>The name of the file</td>
+                <td>The path of the file</td>
             </tr>
                     <tr>
-                <td>bool</td>
+                <td>
+    bool</td>
                 <td>$must_exist</td>
                 <td>Does the class have to verify the file existence (default is true)</td>
             </tr>
@@ -551,7 +638,7 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>If the file can't be found</td>
             </tr>
             </table>
@@ -563,9 +650,12 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_setFlags">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 87</div>
-        <code>                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
-    <strong>setFlags</strong>(int $flags)</code>
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_setFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 88</div>
+        <code>                    
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+    <strong>setFlags</strong>(
+    int $flags)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -575,7 +665,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$flags</td>
                 <td>The flags value to set (use the class's constants)</td>
             </tr>
@@ -586,7 +677,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
+            <td>
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
             <td>The object itself is returned for method chaining</td>
         </tr>
     </table>
@@ -599,8 +691,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getFlags">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 98</div>
-        <code>                    int
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getFlags"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 99</div>
+        <code>                    
+    int
     <strong>getFlags</strong>()</code>
     </h3>
     <div class="details">
@@ -612,7 +706,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>
+    int</td>
             <td>The object's root directory</td>
         </tr>
     </table>
@@ -625,8 +720,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getExtension">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getExtension"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 108</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getExtension"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 109</div>
+        <code>                    
+    string
     <strong>getExtension</strong>()</code>
     </h3>
     <div class="details">
@@ -638,7 +735,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The extension string of the object if so</td>
         </tr>
     </table>
@@ -651,8 +749,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getRealPath">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRealPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 118</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getRealPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 119</div>
+        <code>                    
+    string
     <strong>getRealPath</strong>()</code>
     </h3>
     <div class="details">
@@ -664,7 +764,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The absolute canonical path of the file in the server filesystem</td>
         </tr>
     </table>
@@ -677,8 +778,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getFilename">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 132</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 133</div>
+        <code>                    
+    string
     <strong>getFilename</strong>()</code>
     </h3>
     <div class="details">
@@ -690,7 +793,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The relative file path as it was passed to the constructor</td>
         </tr>
     </table>
@@ -703,9 +807,12 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_setRootDir">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 143</div>
-        <code>                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
-    <strong>setRootDir</strong>(string $dir_name)</code>
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_setRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 144</div>
+        <code>                    
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+    <strong>setRootDir</strong>(
+    string $dir_name)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -715,7 +822,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$dir_name</td>
                 <td>The absolute path of the root directory</td>
             </tr>
@@ -726,7 +834,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
+            <td>
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
             <td>The object itself is returned for method chaining</td>
         </tr>
     </table>
@@ -739,8 +848,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getRootDir">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 155</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getRootDir"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 156</div>
+        <code>                    
+    string
     <strong>getRootDir</strong>()</code>
     </h3>
     <div class="details">
@@ -752,7 +863,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object's root directory</td>
         </tr>
     </table>
@@ -765,9 +877,12 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_setWebPath">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_setWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 166</div>
-        <code>                    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
-    <strong>setWebPath</strong>(string $path)</code>
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_setWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 167</div>
+        <code>                    
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a>
+    <strong>setWebPath</strong>(
+    string $path)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -777,7 +892,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$path</td>
                 <td>The path to set, without the file name</td>
             </tr>
@@ -788,7 +904,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
+            <td>
+    <a href="../../WebFilesystem/WebFileInfo.html"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a></td>
             <td>The object itself is returned for method chaining</td>
         </tr>
     </table>
@@ -801,8 +918,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getWebPath">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 177</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 178</div>
+        <code>                    
+    string
     <strong>getWebPath</strong>()</code>
     </h3>
     <div class="details">
@@ -814,7 +933,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object's web path, without the file name</td>
         </tr>
     </table>
@@ -827,8 +947,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getRealWebPath">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getRealWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 189</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getRealWebPath"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 190</div>
+        <code>                    
+    string
     <strong>getRealWebPath</strong>()</code>
     </h3>
     <div class="details">
@@ -840,7 +962,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object's full file web path</td>
         </tr>
     </table>
@@ -853,8 +976,9 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_exists">
-        <div class="location">at line 369</div>
-        <code>                    bool
+        <div class="location">at line 373</div>
+        <code>                    
+    bool
     <strong>exists</strong>()</code>
     </h3>
     <div class="details">
@@ -866,7 +990,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td><code>true</code> if it exists, <code>false</code> otherwise</td>
         </tr>
     </table>
@@ -879,8 +1004,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_pathExists">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_pathExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 210</div>
-        <code>                    bool
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_pathExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 211</div>
+        <code>                    
+    bool
     <strong>pathExists</strong>()</code>
     </h3>
     <div class="details">
@@ -892,7 +1019,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td><code>true</code> if it exists, <code>false</code> otherwise</td>
         </tr>
     </table>
@@ -905,8 +1033,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_rootDirExists">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_rootDirExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 221</div>
-        <code>                    bool
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_rootDirExists"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 222</div>
+        <code>                    
+    bool
     <strong>rootDirExists</strong>()</code>
     </h3>
     <div class="details">
@@ -918,7 +1048,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td><code>true</code> if it exists, <code>false</code> otherwise</td>
         </tr>
     </table>
@@ -931,8 +1062,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getHumanReadableFilename">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getHumanReadableFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 232</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getHumanReadableFilename"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 233</div>
+        <code>                    
+    string
     <strong>getHumanReadableFilename</strong>()</code>
     </h3>
     <div class="details">
@@ -944,7 +1077,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The directory name transformed</td>
         </tr>
     </table>
@@ -957,8 +1091,10 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getStat">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getStat"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 246</div>
-        <code>                    array
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getStat"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 247</div>
+        <code>                    
+    array
     <strong>getStat</strong>()</code>
     </h3>
     <div class="details">
@@ -971,7 +1107,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
+            <td>
+    array</td>
             <td>The result of the <code>stat()</code> function on the file, with string indexes only</td>
         </tr>
     </table>
@@ -984,8 +1121,10 @@ and few values transformed added depending on object's flags.</p>            </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getMimeType">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getMimeType"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 274</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getMimeType"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 275</div>
+        <code>                    
+    string
     <strong>getMimeType</strong>()</code>
     </h3>
     <div class="details">
@@ -997,7 +1136,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The mime type string</td>
         </tr>
     </table>
@@ -1010,8 +1150,10 @@ and few values transformed added depending on object's flags.</p>            </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getCharset">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getCharset"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 289</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getCharset"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 290</div>
+        <code>                    
+    string
     <strong>getCharset</strong>()</code>
     </h3>
     <div class="details">
@@ -1023,7 +1165,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The mime charset string</td>
         </tr>
     </table>
@@ -1036,8 +1179,10 @@ and few values transformed added depending on object's flags.</p>            </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getMime">
-        <div class="location">in <a href="../../WebFilesystem/WebFileInfo.html#method_getMime"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 304</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../WebFilesystem/WebFileInfo.html#method_getMime"><abbr title="WebFilesystem\WebFileInfo">WebFileInfo</abbr></a> at line 305</div>
+        <code>                    
+    string
     <strong>getMime</strong>()</code>
     </h3>
     <div class="details">
@@ -1049,7 +1194,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The full mime string like 'type ; charset'</td>
         </tr>
     </table>
@@ -1063,8 +1209,10 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_setThumbFilename">
         <div class="location">at line 126</div>
-        <code>                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
-    <strong>setThumbFilename</strong>(string $file_name)</code>
+        <code>                    
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+    <strong>setThumbFilename</strong>(
+    string $file_name)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1074,7 +1222,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$file_name</td>
                 <td>The file<em>name to set, without other path (just a file</em>name)</td>
             </tr>
@@ -1085,7 +1234,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
+            <td>
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -1100,7 +1250,8 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_getThumbFilename">
         <div class="location">at line 137</div>
-        <code>                    string
+        <code>                    
+    string
     <strong>getThumbFilename</strong>()</code>
     </h3>
     <div class="details">
@@ -1112,7 +1263,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object thumb file name, without any directory</td>
         </tr>
     </table>
@@ -1126,7 +1278,8 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_getThumbBasename">
         <div class="location">at line 147</div>
-        <code>                    string
+        <code>                    
+    string
     <strong>getThumbBasename</strong>()</code>
     </h3>
     <div class="details">
@@ -1138,7 +1291,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object thumb file name, without any directory</td>
         </tr>
     </table>
@@ -1152,8 +1306,10 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_setThumbRootDir">
         <div class="location">at line 158</div>
-        <code>                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
-    <strong>setThumbRootDir</strong>(string $path)</code>
+        <code>                    
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+    <strong>setThumbRootDir</strong>(
+    string $path)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1163,7 +1319,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$path</td>
                 <td>The path to set, without the file name</td>
             </tr>
@@ -1174,7 +1331,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
+            <td>
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -1189,7 +1347,8 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_getThumbRootDir">
         <div class="location">at line 169</div>
-        <code>                    string
+        <code>                    
+    string
     <strong>getThumbRootDir</strong>()</code>
     </h3>
     <div class="details">
@@ -1201,7 +1360,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object thumb web path, without the file name</td>
         </tr>
     </table>
@@ -1215,8 +1375,10 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_setThumbPath">
         <div class="location">at line 180</div>
-        <code>                    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
-    <strong>setThumbPath</strong>(string $path)</code>
+        <code>                    
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a>
+    <strong>setThumbPath</strong>(
+    string $path)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1226,7 +1388,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$path</td>
                 <td>The web path to set, without the file name</td>
             </tr>
@@ -1237,7 +1400,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
+            <td>
+    <a href="../../WebFilesystem/FileType/WebImage.html"><abbr title="WebFilesystem\FileType\WebImage">WebImage</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -1252,7 +1416,8 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_getThumbPath">
         <div class="location">at line 191</div>
-        <code>                    string
+        <code>                    
+    string
     <strong>getThumbPath</strong>()</code>
     </h3>
     <div class="details">
@@ -1264,7 +1429,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object thumb web path, without the file name</td>
         </tr>
     </table>
@@ -1278,7 +1444,8 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_getThumbPathname">
         <div class="location">at line 201</div>
-        <code>                    string
+        <code>                    
+    string
     <strong>getThumbPathname</strong>()</code>
     </h3>
     <div class="details">
@@ -1290,7 +1457,8 @@ and few values transformed added depending on object's flags.</p>            </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object thumb web path, with the file name</td>
         </tr>
     </table>
@@ -1304,7 +1472,8 @@ and few values transformed added depending on object's flags.</p>            </d
                     <div class="method-item">
                     <h3 id="method_getThumbRealPath">
         <div class="location">at line 212</div>
-        <code>                    string
+        <code>                    
+    string
     <strong>getThumbRealPath</strong>()</code>
     </h3>
     <div class="details">
@@ -1317,7 +1486,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object web full file path</td>
         </tr>
     </table>
@@ -1331,7 +1501,8 @@ This returns a directly HTML writable directory or file path</p>                
                     <div class="method-item">
                     <h3 id="method_getThumbWebPath">
         <div class="location">at line 222</div>
-        <code>                    string
+        <code>                    
+    string
     <strong>getThumbWebPath</strong>()</code>
     </h3>
     <div class="details">
@@ -1343,7 +1514,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object thumb web path, without the file name</td>
         </tr>
     </table>
@@ -1357,7 +1529,8 @@ This returns a directly HTML writable directory or file path</p>                
                     <div class="method-item">
                     <h3 id="method_getThumbRealWebPath">
         <div class="location">at line 233</div>
-        <code>                    string
+        <code>                    
+    string
     <strong>getThumbRealWebPath</strong>()</code>
     </h3>
     <div class="details">
@@ -1370,7 +1543,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>The object web full file path</td>
         </tr>
     </table>
@@ -1384,7 +1558,8 @@ This returns a directly HTML writable directory or file path</p>                
                     <div class="method-item">
                     <h3 id="method_getInfos">
         <div class="location">at line 243</div>
-        <code>                    array
+        <code>                    
+    array
     <strong>getInfos</strong>()</code>
     </h3>
     <div class="details">
@@ -1396,7 +1571,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
+            <td>
+    array</td>
             <td>A full array of standard, EXIF and IPTC image's infos</td>
         </tr>
     </table>
@@ -1410,7 +1586,8 @@ This returns a directly HTML writable directory or file path</p>                
                     <div class="method-item">
                     <h3 id="method_getImageInfos">
         <div class="location">at line 262</div>
-        <code>                    array
+        <code>                    
+    array
     <strong>getImageInfos</strong>()</code>
     </h3>
     <div class="details">
@@ -1422,7 +1599,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
+            <td>
+    array</td>
             <td>An array of retrieved image's infos</td>
         </tr>
     </table>
@@ -1436,7 +1614,8 @@ This returns a directly HTML writable directory or file path</p>                
                     <div class="method-item">
                     <h3 id="method_getIptcInfos">
         <div class="location">at line 306</div>
-        <code>                    array
+        <code>                    
+    array
     <strong>getIptcInfos</strong>()</code>
     </h3>
     <div class="details">
@@ -1448,7 +1627,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
+            <td>
+    array</td>
             <td>An array of retrieved image's infos</td>
         </tr>
     </table>
@@ -1462,7 +1642,8 @@ This returns a directly HTML writable directory or file path</p>                
                     <div class="method-item">
                     <h3 id="method_getExifInfos">
         <div class="location">at line 330</div>
-        <code>                    array
+        <code>                    
+    array
     <strong>getExifInfos</strong>()</code>
     </h3>
     <div class="details">
@@ -1474,7 +1655,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
+            <td>
+    array</td>
             <td>An array of retrieved image's infos</td>
         </tr>
     </table>
@@ -1487,8 +1669,9 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_thumbExists">
-        <div class="location">at line 379</div>
-        <code>                    bool
+        <div class="location">at line 383</div>
+        <code>                    
+    bool
     <strong>thumbExists</strong>()</code>
     </h3>
     <div class="details">
@@ -1500,7 +1683,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td><code>true</code> if it exists, <code>false</code> otherwise</td>
         </tr>
     </table>
@@ -1513,8 +1697,9 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_isImage">
-        <div class="location">at line 390</div>
+        <div class="location">at line 394</div>
         <code>                    
+    
     <strong>isImage</strong>()</code>
     </h3>
     <div class="details">
@@ -1539,8 +1724,9 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getGps">
-        <div class="location">at line 398</div>
+        <div class="location">at line 402</div>
         <code>        static            
+    
     <strong>getGps</strong>($exifCoord, $hemi)</code>
     </h3>
     <div class="details">
@@ -1573,9 +1759,11 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_gps2Num">
-        <div class="location">at line 413</div>
-        <code>        static            float
-    <strong>gps2Num</strong>(int $coordPart)</code>
+        <div class="location">at line 417</div>
+        <code>        static            
+    float
+    <strong>gps2Num</strong>(
+    int $coordPart)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1585,7 +1773,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$coordPart</td>
                 <td>The GPS coordinate to transform</td>
             </tr>
@@ -1596,7 +1785,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>float</td>
+            <td>
+    float</td>
             <td>The corresponding floated value</td>
         </tr>
     </table>
@@ -1609,9 +1799,11 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getDateFromExif">
-        <div class="location">at line 431</div>
-        <code>        static            mixed
-    <strong>getDateFromExif</strong>(int $date)</code>
+        <div class="location">at line 435</div>
+        <code>        static            
+    mixed
+    <strong>getDateFromExif</strong>(
+    int $date)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1621,7 +1813,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$date</td>
                 <td>The EXIF date field value</td>
             </tr>
@@ -1632,7 +1825,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed</td>
+            <td>
+    mixed</td>
             <td>The re-formated date in SQL format</td>
         </tr>
     </table>
@@ -1645,9 +1839,11 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getBase64Content">
-        <div class="location">at line 450</div>
-        <code>                    string
-    <strong>getBase64Content</strong>(bool $to_href = false)</code>
+        <div class="location">at line 454</div>
+        <code>                    
+    string
+    <strong>getBase64Content</strong>(
+    bool $to_href = false)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1657,7 +1853,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
                     <tr>
-                <td>bool</td>
+                <td>
+    bool</td>
                 <td>$to_href</td>
                 <td>Set to <code>true</code> to get a full result to use in <code>img</code> tag</td>
             </tr>
@@ -1668,7 +1865,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>
 </td>
         </tr>
@@ -1682,8 +1880,9 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getHeight">
-        <div class="location">at line 471</div>
-        <code>                    null|int
+        <div class="location">at line 475</div>
+        <code>                    
+    null|int
     <strong>getHeight</strong>()</code>
     </h3>
     <div class="details">
@@ -1695,7 +1894,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>null|int</td>
+            <td>
+    null|int</td>
             <td>
 </td>
         </tr>
@@ -1709,8 +1909,9 @@ This returns a directly HTML writable directory or file path</p>                
             </div>
                     <div class="method-item">
                     <h3 id="method_getWidth">
-        <div class="location">at line 482</div>
-        <code>                    null|int
+        <div class="location">at line 486</div>
+        <code>                    
+    null|int
     <strong>getWidth</strong>()</code>
     </h3>
     <div class="details">
@@ -1722,7 +1923,8 @@ This returns a directly HTML writable directory or file path</p>                
 
                     <table class="table table-condensed">
         <tr>
-            <td>null|int</td>
+            <td>
+    null|int</td>
             <td>
 </td>
         </tr>

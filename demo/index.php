@@ -7,7 +7,7 @@
  * `E_ALL & ~E_STRICT` => for hard dev in PHP5.4 avoiding strict warnings
  * `E_ALL & ~E_NOTICE & ~E_STRICT` => classic setting
  */
-@ini_set('display_errors','1'); @error_reporting(E_ALL);
+@ini_set('display_errors', '1'); @error_reporting(E_ALL);
 //@ini_set('display_errors','1'); @error_reporting(E_ALL & ~E_STRICT);
 //@ini_set('display_errors','1'); @error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
 
@@ -29,7 +29,9 @@ function _getSecuredRealPath($path, $depth_from_root = 1)
 {
     $ds = DIRECTORY_SEPARATOR;
     $parts = explode($ds, realpath('.'));
-    for ($i=0; $i<=$depth_from_root; $i++) array_pop($parts);
+    for ($i=0; $i<=$depth_from_root; $i++) {
+        array_pop($parts);
+    }
     return str_replace(join($ds, $parts), $ds.'[***]', $path);
 }
 
@@ -91,7 +93,7 @@ echo '</pre>';
 exit('yo');
 */
 
-function getPhpClassManualLink( $class_name, $ln='en' )
+function getPhpClassManualLink($class_name, $ln='en')
 {
     return sprintf('http://php.net/manual/%s/class.%s.php', $ln, strtolower($class_name));
 }
@@ -323,36 +325,36 @@ use WebFilesystem\WebFileInfo;
 
 echo "\n\n";
 echo '// Tests of class\'s constants:'."\n";
-echo 'echo WebFileInfo::STAT_DATETIME_FIELD; // '.var_export(WebFileInfo::STAT_DATETIME_FIELD,1)."\n";
-echo 'echo WebFileInfo::STAT_SIZE_FIELD; // '.var_export(WebFileInfo::STAT_SIZE_FIELD,1)."\n";
-echo 'echo WebFileInfo::STAT_DATETIME_FIELD | WebFileInfo::STAT_SIZE_FIELD; // '.var_export(WebFileInfo::STAT_DATETIME_FIELD | WebFileInfo::STAT_SIZE_FIELD,1)."\n";
+echo 'echo WebFileInfo::STAT_DATETIME_FIELD; // '.var_export(WebFileInfo::STAT_DATETIME_FIELD, 1)."\n";
+echo 'echo WebFileInfo::STAT_SIZE_FIELD; // '.var_export(WebFileInfo::STAT_SIZE_FIELD, 1)."\n";
+echo 'echo WebFileInfo::STAT_DATETIME_FIELD | WebFileInfo::STAT_SIZE_FIELD; // '.var_export(WebFileInfo::STAT_DATETIME_FIELD | WebFileInfo::STAT_SIZE_FIELD, 1)."\n";
 
 echo "\n\n";
 echo '// Test of `WebFileInfo` class: (in the example, our testing file is "photos/license.txt")'."\n";
 echo '$test = new WebFileInfo( "photos/license.txt", __DIR__ );'."\n";
-$test = new WebFileInfo( "photos/license.txt", __DIR__ );
+$test = new WebFileInfo("photos/license.txt", __DIR__);
 
 echo "\n\n";
 echo '// Test of some properties form the `SplFileInfo` class:'."\n";
-echo 'echo $test->getFilename(); // '.var_export(_getSecuredRealPath($test->getFilename()),1)."\n";
-echo 'echo $test->getBasename(); // '.var_export(_getSecuredRealPath($test->getBasename()),1)."\n";
-echo 'echo $test->getPath(); // '.var_export(_getSecuredRealPath($test->getPath()),1)."\n";
-echo 'echo $test->getPathname(); // '.var_export(_getSecuredRealPath($test->getPathname()),1)."\n";
-echo 'echo $test->getRealPath(); // '.var_export(_getSecuredRealPath($test->getRealPath()),1)."\n";
-echo 'echo $test->getExtension(); // '.var_export($test->getExtension(),1)."\n";
+echo 'echo $test->getFilename(); // '.var_export(_getSecuredRealPath($test->getFilename()), 1)."\n";
+echo 'echo $test->getBasename(); // '.var_export(_getSecuredRealPath($test->getBasename()), 1)."\n";
+echo 'echo $test->getPath(); // '.var_export(_getSecuredRealPath($test->getPath()), 1)."\n";
+echo 'echo $test->getPathname(); // '.var_export(_getSecuredRealPath($test->getPathname()), 1)."\n";
+echo 'echo $test->getRealPath(); // '.var_export(_getSecuredRealPath($test->getRealPath()), 1)."\n";
+echo 'echo $test->getExtension(); // '.var_export($test->getExtension(), 1)."\n";
 
 echo "\n\n";
 echo '// Test of some properties added by the `WebFileInfo` class:'."\n";
-echo 'echo $test->getRootDir(); // '.var_export(_getSecuredRealPath($test->getRootDir()),1)."\n";
-echo 'echo $test->rootDirExists(); // '.var_export($test->rootDirExists(),1)."\n";
-echo 'echo $test->pathExists(); // '.var_export($test->pathExists(),1)."\n";
-echo 'echo $test->getWebPath(); // '.var_export(_getSecuredRealPath($test->getWebPath()),1)."\n";
-echo 'echo $test->getRealWebPath(); // '.var_export(_getSecuredRealPath($test->getRealWebPath()),1)."\n";
-echo 'echo $test->exists(); // '.var_export($test->exists(),1)."\n";
-echo 'echo $test->getHumanReadableFilename(); // '.var_export($test->getHumanReadableFilename(),1)."\n";
-echo 'echo $test->getMime(); // '.var_export($test->getMime(),1)."\n";
-echo 'echo $test->getCharset(); // '.var_export($test->getCharset(),1)."\n";
-echo 'echo $test->getMimeType(); // '.var_export($test->getMimeType(),1)."\n";
+echo 'echo $test->getRootDir(); // '.var_export(_getSecuredRealPath($test->getRootDir()), 1)."\n";
+echo 'echo $test->rootDirExists(); // '.var_export($test->rootDirExists(), 1)."\n";
+echo 'echo $test->pathExists(); // '.var_export($test->pathExists(), 1)."\n";
+echo 'echo $test->getWebPath(); // '.var_export(_getSecuredRealPath($test->getWebPath()), 1)."\n";
+echo 'echo $test->getRealWebPath(); // '.var_export(_getSecuredRealPath($test->getRealWebPath()), 1)."\n";
+echo 'echo $test->exists(); // '.var_export($test->exists(), 1)."\n";
+echo 'echo $test->getHumanReadableFilename(); // '.var_export($test->getHumanReadableFilename(), 1)."\n";
+echo 'echo $test->getMime(); // '.var_export($test->getMime(), 1)."\n";
+echo 'echo $test->getCharset(); // '.var_export($test->getCharset(), 1)."\n";
+echo 'echo $test->getMimeType(); // '.var_export($test->getMimeType(), 1)."\n";
 
 echo "\n\n";
 echo '// Test of link to the `RealWebPath` value:'."\n";
@@ -362,22 +364,22 @@ echo '<a href="'.$test->getRealWebPath().'">test link</a>'."\n";
 echo "\n\n";
 echo '// Test of classic stat informations retrieving:'."\n";
 echo 'echo $test->getStat();'."\n";
-echo var_export($test->getStat(),1)."\n";
+echo var_export($test->getStat(), 1)."\n";
 
 echo "\n\n";
 echo '// Same stat informations setting flags on `WebFileInfo::STAT_DATETIME_FIELD` (no human readable size field):'."\n";
 echo 'echo $test->setFlags(WebFileInfo::STAT_DATETIME_FIELD)->getStat();'."\n";
-echo var_export($test->setFlags(WebFileInfo::STAT_DATETIME_FIELD)->getStat(),1)."\n";
+echo var_export($test->setFlags(WebFileInfo::STAT_DATETIME_FIELD)->getStat(), 1)."\n";
 
 echo "\n\n";
 echo '// Same stat informations setting flags on `WebFileInfo::STAT_SIZE_FIELD` (no datetime fields):'."\n";
 echo 'echo $test->setFlags(WebFileInfo::STAT_SIZE_FIELD)->getStat();'."\n";
-echo var_export($test->setFlags(WebFileInfo::STAT_SIZE_FIELD)->getStat(),1)."\n";
+echo var_export($test->setFlags(WebFileInfo::STAT_SIZE_FIELD)->getStat(), 1)."\n";
 
 echo "\n\n";
 echo '// Same stat informations setting flags on `null` or `0` or `false` (classic `stat()` fields):'."\n";
 echo 'echo $test->setFlags(null)->getStat();'."\n";
-echo var_export($test->setFlags(null)->getStat(),1)."\n";
+echo var_export($test->setFlags(null)->getStat(), 1)."\n";
 ?>
     </pre>
 
@@ -404,11 +406,11 @@ use WebFilesystem\WebFilesystemIterator;
 echo "\n";
 echo '## Test of `WebFilesystemIterator` class on "'.$arg_dir.'":'."\n";
 echo '$wfsi_test = new WebFilesystemIterator( "'.$arg_dir.'" );'."\n";
-$wfsi_test = new WebFilesystemIterator( $arg_dir );
+$wfsi_test = new WebFilesystemIterator($arg_dir);
 echo 'echo $wfsi_test->getFlags();'."\n";
-echo "\t".'=> '.var_export($wfsi_test->getFlags(),1)."\n";
+echo "\t".'=> '.var_export($wfsi_test->getFlags(), 1)."\n";
 echo 'echo count($wfsi_test);'."\n";
-echo "\t".'=> '.var_export(count($wfsi_test),1)."\n";
+echo "\t".'=> '.var_export(count($wfsi_test), 1)."\n";
 
 echo "\n";
 echo '## Loop on $wfsi_test:'."\n";
@@ -419,11 +421,10 @@ echo '}'."\n";
 
 echo "\n";
 echo '## Result of the loop is:'."\n";
-foreach($wfsi_test as $_f)
-{
+foreach ($wfsi_test as $_f) {
     echo "\t".$wfsi_test->key().' => '.$_f->getFilename()
-        ."\t".'['.var_export(get_class($wfsi_test->current()),1).']'
-        ."\t".'['.var_export(get_class($_f),1).']'
+        ."\t".'['.var_export(get_class($wfsi_test->current()), 1).']'
+        ."\t".'['.var_export(get_class($_f), 1).']'
         ."\n";
 }
 
@@ -432,15 +433,14 @@ echo '## Redefinition of default internal `FilesystemIterator` flags on $wfsi_te
 echo '$wfsi_test->setFlags(WebFilesystemIterator::KEY_AS_PATHNAME | WebFilesystemIterator::CURRENT_AS_FILEINFO | WebFilesystemIterator::SKIP_DOTS);'."\n";
 $wfsi_test->setFlags(WebFilesystemIterator::KEY_AS_PATHNAME | WebFilesystemIterator::CURRENT_AS_FILEINFO | WebFilesystemIterator::SKIP_DOTS);
 echo 'echo $wfsi_test->getFlags();'."\n";
-echo "\t".'=> '.var_export($wfsi_test->getFlags(),1)."\n";
+echo "\t".'=> '.var_export($wfsi_test->getFlags(), 1)."\n";
 
 echo "\n";
 echo '## Result of the loop is now:'."\n";
-foreach($wfsi_test as $_f)
-{
+foreach ($wfsi_test as $_f) {
     echo "\t".$wfsi_test->key().' => '.$_f->getFilename()
-        ."\t".'['.var_export(get_class($wfsi_test->current()),1).']'
-        ."\t".'['.var_export(get_class($_f),1).']'
+        ."\t".'['.var_export(get_class($wfsi_test->current()), 1).']'
+        ."\t".'['.var_export(get_class($_f), 1).']'
         ."\n";
 }
 ?>
@@ -470,11 +470,11 @@ use WebFilesystem\WebRecursiveDirectoryIterator;
 echo "\n";
 echo '## Test of `WebRecursiveDirectoryIterator` class on "'.$img_dir.'/":'."\n";
 echo '$wrdi_test = new WebRecursiveDirectoryIterator( "'.$img_dir.'" );'."\n";
-$wrdi_test = new WebRecursiveDirectoryIterator( $img_dir );
+$wrdi_test = new WebRecursiveDirectoryIterator($img_dir);
 echo 'echo $wrdi_test->getFlags();'."\n";
-echo "\t".'=> '.var_export($wrdi_test->getFlags(),1)."\n";
+echo "\t".'=> '.var_export($wrdi_test->getFlags(), 1)."\n";
 echo 'echo count($wrdi_test);'."\n";
-echo "\t".'=> '.var_export(count($wrdi_test),1)."\n";
+echo "\t".'=> '.var_export(count($wrdi_test), 1)."\n";
 
 echo "\n";
 echo '## Loop on $wrdi_test:'."\n";
@@ -487,34 +487,35 @@ echo '}'."\n";
 
 echo "\n";
 echo '## Result of the loop is:'."\n";
-foreach($wrdi_test as $_f)
-{
+foreach ($wrdi_test as $_f) {
     echo "\t".$wrdi_test->key().' => '.$_f->getFilename()
-        ."\t".'['.var_export(get_class($wrdi_test->current()),1).']'
-        ."\t".'['.var_export(get_class($_f),1).']'
+        ."\t".'['.var_export(get_class($wrdi_test->current()), 1).']'
+        ."\t".'['.var_export(get_class($_f), 1).']'
         ."\n";
-    echo "\t".var_export($wrdi_test->hasChildren(),1)."\n";
-    if ($wrdi_test->hasChildren()) echo "\t".var_export($wrdi_test->getChildren(),1)
+    echo "\t".var_export($wrdi_test->hasChildren(), 1)."\n";
+    if ($wrdi_test->hasChildren()) {
+        echo "\t".var_export($wrdi_test->getChildren(), 1)
         ."\t".'['.get_class($wrdi_test->getChildren()).']'
-        ."\t".'['.var_export($wrdi_test->getSubPath(),1).']'
-        ."\t".'['.var_export($wrdi_test->getSubPathName(),1).']'
+        ."\t".'['.var_export($wrdi_test->getSubPath(), 1).']'
+        ."\t".'['.var_export($wrdi_test->getSubPathName(), 1).']'
         ."\n";
+    }
 }
 
 echo "\n\n";
 echo '## Test of `WebRecursiveDirectoryIterator` class on photos with callback `WebFilesystem\WebFilesystem::isCommonImage`: (see "photos/")'."\n";
 echo '$wrdic_test = new WebRecursiveDirectoryIterator( "photos", 16432, "WebFilesystem\WebFilesystem::isCommonImage" );'."\n";
-$wrdic_test = new WebRecursiveDirectoryIterator( "photos", 16432, "WebFilesystem\WebFilesystem::isCommonImage" );
+$wrdic_test = new WebRecursiveDirectoryIterator("photos", 16432, "WebFilesystem\WebFilesystem::isCommonImage");
 echo 'echo $wrdic_test->getFlags();'."\n";
-echo "\t".'=> '.var_export($wrdic_test->getFlags(),1)."\n";
+echo "\t".'=> '.var_export($wrdic_test->getFlags(), 1)."\n";
 echo 'echo count($wrdic_test);'."\n";
-echo "\t".'=> '.var_export(count($wrdic_test),1)."\n";
+echo "\t".'=> '.var_export(count($wrdic_test), 1)."\n";
 echo 'echo $wrdic_test->recursiveCount();'."\n";
-echo "\t".'=> '.var_export($wrdic_test->recursiveCount(),1)."\n";
+echo "\t".'=> '.var_export($wrdic_test->recursiveCount(), 1)."\n";
 echo 'echo $wrdic_test->getFileValidationCallback();'."\n";
-echo "\t".'=> '.var_export($wrdic_test->getFileValidationCallback(),1)."\n";
+echo "\t".'=> '.var_export($wrdic_test->getFileValidationCallback(), 1)."\n";
 echo 'echo $wrdic_test->getDirectoryValidationCallback();'."\n";
-echo "\t".'=> '.var_export($wrdic_test->getDirectoryValidationCallback(),1)."\n";
+echo "\t".'=> '.var_export($wrdic_test->getDirectoryValidationCallback(), 1)."\n";
 
 echo "\n\n";
 echo '## Test of looping over directory contents:'."\n";
@@ -525,15 +526,14 @@ echo '}'."\n";
 
 echo "\n\n";
 echo '## Restult of the loop is:'."\n";
-foreach($wrdic_test as $i=>$_photo)
-{
+foreach ($wrdic_test as $i=>$_photo) {
     echo '### For image '.$i.':'."\n";
     echo "\t".'echo $_photo->getHumanReadableFilename();'."\n";
-    echo "\t\t".'=> '.var_export($_photo->getHumanReadableFilename(),1)."\n";
+    echo "\t\t".'=> '.var_export($_photo->getHumanReadableFilename(), 1)."\n";
     echo "\t".'echo $_photo->getWebPath();'."\n";
-    echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getWebPath()),1)."\n";
+    echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getWebPath()), 1)."\n";
     echo "\t".'echo $_photo->getRealWebPath();'."\n";
-    echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getRealWebPath()),1)."\n";
+    echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getRealWebPath()), 1)."\n";
 }
 
 echo "\n\n";
@@ -541,25 +541,31 @@ echo '## Setting a custom file class:'."\n";
 echo 'use WebFilesystem\FileType\WebImage;'."\n";
 echo '$wrdic_test->setFileClass( "WebFilesystem\FileType\WebImage" );'."\n";
 use WebFilesystem\FileType\WebImage;
-$wrdic_test->setFileClass( 'WebFilesystem\FileType\WebImage' );
+
+$wrdic_test->setFileClass('WebFilesystem\FileType\WebImage');
 
 echo "\n\n";
 echo '## Restult of the loop is now:'."\n";
-foreach($wrdic_test as $i=>$_photo)
-{
+foreach ($wrdic_test as $i=>$_photo) {
     echo '### For image '.$i.':'."\n";
     echo "\t".'echo $_photo->getHumanReadableFilename();'."\n";
-    echo "\t\t".'=> '.var_export($_photo->getHumanReadableFilename(),1)."\n";
+    echo "\t\t".'=> '.var_export($_photo->getHumanReadableFilename(), 1)."\n";
     echo "\t".'echo $_photo->getWebPath();'."\n";
-    echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getWebPath()),1)."\n";
+    echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getWebPath()), 1)."\n";
     echo "\t".'echo $_photo->getRealWebPath();'."\n";
-    echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getRealWebPath()),1)."\n";
+    echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getRealWebPath()), 1)."\n";
     echo "\t".'echo if (!$wrdic_test->hasChildren()) $_photo->getThumbWebPath();'."\n";
-    if (!$wrdic_test->hasChildren()) echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getThumbWebPath()),1)."\n";
+    if (!$wrdic_test->hasChildren()) {
+        echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getThumbWebPath()), 1)."\n";
+    }
     echo "\t".'echo if (!$wrdic_test->hasChildren()) $_photo->getThumbRealWebPath();'."\n";
-    if (!$wrdic_test->hasChildren()) echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getThumbRealWebPath()),1)."\n";
+    if (!$wrdic_test->hasChildren()) {
+        echo "\t\t".'=> '.var_export(_getSecuredRealPath($_photo->getThumbRealWebPath()), 1)."\n";
+    }
     echo "\t".'echo if (!$wrdic_test->hasChildren()) $_photo->thumbExists();'."\n";
-    if (!$wrdic_test->hasChildren()) echo "\t\t".'=> '.var_export($_photo->thumbExists(),1)."\n";
+    if (!$wrdic_test->hasChildren()) {
+        echo "\t\t".'=> '.var_export($_photo->thumbExists(), 1)."\n";
+    }
 }
 ?>
     </pre>
@@ -574,63 +580,64 @@ foreach($wrdic_test as $i=>$_photo)
     <pre class="code" data-language="php">
 <?php
 use WebFilesystem\WebFilesystem;
-$dir_photos_test = new WebRecursiveDirectoryIterator( $img_dir,
+
+$dir_photos_test = new WebRecursiveDirectoryIterator($img_dir,
     \FilesystemIterator::KEY_AS_PATHNAME | \FilesystemIterator::CURRENT_AS_PATHNAME | WebFilesystemIterator::SKIP_DOTTED,
-    "WebFilesystem\WebFilesystem::isCommonImage" );
+    "WebFilesystem\WebFilesystem::isCommonImage");
 
 echo "\n\n";
 echo '## Test of `WebImage` class: (in the example, our testing image is the first in "'.$img_dir.'")'."\n";
 echo '$photo = new WebImage( $dir->getPath(), __DIR__, $dir_test->getFilename() );'."\n";
-$photo = new WebImage( $dir_photos_test->getPath(), $arg_root, $dir_photos_test->getFilename() );
+$photo = new WebImage($dir_photos_test->getPath(), $arg_root, $dir_photos_test->getFilename());
 
 echo "\n\n";
 echo '## Test of class directory validator:'."\n";
 echo 'echo $photo->isImage(); '."\n";
-echo "\t".'=> '.var_export($photo->isImage(),1);
+echo "\t".'=> '.var_export($photo->isImage(), 1);
 
 echo "\n\n";
 echo '## Test of some class properties (`WebFileInfo` class):'."\n";
 echo 'echo $photo->getFilename(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getFilename()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getFilename()), 1)."\n";
 echo 'echo $photo->getBasename(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getBasename()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getBasename()), 1)."\n";
 echo 'echo $photo->getPathname(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getPathname()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getPathname()), 1)."\n";
 echo 'echo $photo->getPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getPath()), 1)."\n";
 echo 'echo $photo->getRealPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getRealPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getRealPath()), 1)."\n";
 echo 'echo $photo->getExtension(); '."\n";
-echo "\t".'=> '.var_export($photo->getExtension(),1)."\n";
+echo "\t".'=> '.var_export($photo->getExtension(), 1)."\n";
 
 echo "\n\n";
 echo '## Test of some class properties (`WebImage` class):'."\n";
 echo 'echo $photo->getWebPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getWebPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getWebPath()), 1)."\n";
 echo 'echo $photo->getRealWebPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getRealWebPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getRealWebPath()), 1)."\n";
 echo 'echo $photo->getThumbBasename(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbBasename()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbBasename()), 1)."\n";
 echo 'echo $photo->getThumbWebPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbWebPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbWebPath()), 1)."\n";
 echo 'echo $photo->getThumbRealWebPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbRealWebPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbRealWebPath()), 1)."\n";
 echo 'echo $photo->getThumbPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbPath()), 1)."\n";
 echo 'echo $photo->getThumbRealPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbRealPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($photo->getThumbRealPath()), 1)."\n";
 echo 'echo $photo->getHumanReadableFilename(); '."\n";
-echo "\t".'=> '.var_export($photo->getHumanReadableFilename(),1)."\n";
+echo "\t".'=> '.var_export($photo->getHumanReadableFilename(), 1)."\n";
 
 echo "\n\n";
 echo '## Test of classic stat informations retrieving:'."\n";
 echo 'echo $photo->getStat();'."\n";
-echo "\t".'=> '.var_export($photo->getStat(),1)."\n";
+echo "\t".'=> '.var_export($photo->getStat(), 1)."\n";
 
 echo "\n\n";
 echo '## Test of image internal informations retrieving:'."\n";
 echo 'echo $photo->getInfos();'."\n";
-echo "\t".'=> '.var_export($photo->getInfos(),1)."\n";
+echo "\t".'=> '.var_export($photo->getInfos(), 1)."\n";
 ?>
     </pre>
 
@@ -641,64 +648,65 @@ echo "\t".'=> '.var_export($photo->getInfos(),1)."\n";
     <pre class="code" data-language="php">
 <?php
 use WebFilesystem\FileType\WebVideo;
-$dir_photos_test = new WebRecursiveDirectoryIterator( $vidz_dir,
+
+$dir_photos_test = new WebRecursiveDirectoryIterator($vidz_dir,
     \FilesystemIterator::KEY_AS_PATHNAME | \FilesystemIterator::CURRENT_AS_PATHNAME | WebFilesystemIterator::SKIP_DOTTED,
-    "WebFilesystem\WebFilesystem::isCommonVideo" );
+    "WebFilesystem\WebFilesystem::isCommonVideo");
 
 
 echo "\n\n";
 echo '## Test of `WebVideo` class: (in the example, our testing image is the first in "'.$img_dir.'")'."\n";
 echo '$video = new WebVideo( $dir->getPath(), __DIR__, $dir_test->getFilename() );'."\n";
-$video = new WebVideo( $dir_photos_test->getPath(), $arg_root, $dir_photos_test->getFilename() );
+$video = new WebVideo($dir_photos_test->getPath(), $arg_root, $dir_photos_test->getFilename());
 
 echo "\n\n";
 echo '## Test of class directory validator:'."\n";
 echo 'echo $video->isVideo(); '."\n";
-echo "\t".'=> '.var_export($video->isVideo(),1);
+echo "\t".'=> '.var_export($video->isVideo(), 1);
 
 echo "\n\n";
 echo '## Test of some class properties (`WebFileInfo` class):'."\n";
 echo 'echo $video->getFilename(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getFilename()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getFilename()), 1)."\n";
 echo 'echo $video->getBasename(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getBasename()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getBasename()), 1)."\n";
 echo 'echo $video->getPathname(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getPathname()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getPathname()), 1)."\n";
 echo 'echo $video->getPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getPath()), 1)."\n";
 echo 'echo $video->getRealPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getRealPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getRealPath()), 1)."\n";
 echo 'echo $video->getExtension(); '."\n";
-echo "\t".'=> '.var_export($video->getExtension(),1)."\n";
+echo "\t".'=> '.var_export($video->getExtension(), 1)."\n";
 
 echo "\n\n";
 echo '## Test of some class properties (`WebImage` class):'."\n";
 echo 'echo $video->getWebPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getWebPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getWebPath()), 1)."\n";
 echo 'echo $video->getRealWebPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getRealWebPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getRealWebPath()), 1)."\n";
 echo 'echo $video->getThumbBasename(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbBasename()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbBasename()), 1)."\n";
 echo 'echo $video->getThumbWebPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbWebPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbWebPath()), 1)."\n";
 echo 'echo $video->getThumbRealWebPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbRealWebPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbRealWebPath()), 1)."\n";
 echo 'echo $video->getThumbPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbPath()), 1)."\n";
 echo 'echo $video->getThumbRealPath(); '."\n";
-echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbRealPath()),1)."\n";
+echo "\t".'=> '.var_export(_getSecuredRealPath($video->getThumbRealPath()), 1)."\n";
 echo 'echo $video->getHumanReadableFilename(); '."\n";
-echo "\t".'=> '.var_export($video->getHumanReadableFilename(),1)."\n";
+echo "\t".'=> '.var_export($video->getHumanReadableFilename(), 1)."\n";
 
 echo "\n\n";
 echo '## Test of classic stat informations retrieving:'."\n";
 echo 'echo $video->getStat();'."\n";
-echo "\t".'=> '.var_export($video->getStat(),1)."\n";
+echo "\t".'=> '.var_export($video->getStat(), 1)."\n";
 
 echo "\n\n";
 echo '## Test of image internal informations retrieving:'."\n";
 echo 'echo $video->getInfos();'."\n";
-echo "\t".'=> '.var_export($video->getInfos(),1)."\n";
+echo "\t".'=> '.var_export($video->getInfos(), 1)."\n";
 ?>
     </pre>
 
@@ -709,6 +717,7 @@ echo "\t".'=> '.var_export($video->getInfos(),1)."\n";
     <pre class="code" data-language="php">
 <?php
 use WebFilesystem\Finder;
+
 echo 'use WebFilesystem\Finder;'."\n";
 echo "\n";
 
@@ -739,17 +748,26 @@ $finder = Finder::create()
     ->links()
     ->in(__DIR__.'/test')
     ;
-foreach($finder as $key=>$val) {
+foreach ($finder as $key=>$val) {
     $val->setRootDir(__DIR__);
     echo $key.' : '.$val->getFilename();
     if ($finder->isFile()) {
         echo ' | is file';
-        if ($finder->isDotFile()) echo ' | is dot file';
-        if ($finder->isImage()) echo ' | is image file';
-        if ($finder->isVideo()) echo ' | is video file';
-        if ($finder->is(array('htm','html'))) echo ' | is HTML';
+        if ($finder->isDotFile()) {
+            echo ' | is dot file';
+        }
+        if ($finder->isImage()) {
+            echo ' | is image file';
+        }
+        if ($finder->isVideo()) {
+            echo ' | is video file';
+        }
+        if ($finder->is(array('htm', 'html'))) {
+            echo ' | is HTML';
+        }
+    } elseif ($finder->isDir()) {
+        echo ' | is dir';
     }
-    elseif ($finder->isDir()) echo ' | is dir';
     echo "\n";
 }
 
@@ -770,17 +788,26 @@ $finder = Finder::create()
     ->in(__DIR__.'/test')
     ->notIn('subfolder_2')
     ;
-foreach($finder as $key=>$val) {
+foreach ($finder as $key=>$val) {
     $val->setRootDir(__DIR__);
     echo $key.' : '.$val->getFilename();
     if ($finder->isFile()) {
         echo ' | is file';
-        if ($finder->isDotFile()) echo ' | is dot file';
-        if ($finder->isImage()) echo ' | is image file';
-        if ($finder->isVideo()) echo ' | is video file';
-        if ($finder->is(array('htm','html'))) echo ' | is HTML';
+        if ($finder->isDotFile()) {
+            echo ' | is dot file';
+        }
+        if ($finder->isImage()) {
+            echo ' | is image file';
+        }
+        if ($finder->isVideo()) {
+            echo ' | is video file';
+        }
+        if ($finder->is(array('htm', 'html'))) {
+            echo ' | is HTML';
+        }
+    } elseif ($finder->isDir()) {
+        echo ' | is dir';
     }
-    elseif ($finder->isDir()) echo ' | is dir';
     echo "\n";
 }
 
@@ -801,17 +828,26 @@ $finder = Finder::create()
     ->depth('1')
     ->in(__DIR__.'/test')
     ;
-foreach($finder as $key=>$val) {
+foreach ($finder as $key=>$val) {
     $val->setRootDir(__DIR__);
     echo $key.' : '.$val->getFilename();
     if ($finder->isFile()) {
         echo ' | is file';
-        if ($finder->isDotFile()) echo ' | is dot file';
-        if ($finder->isImage()) echo ' | is image file';
-        if ($finder->isVideo()) echo ' | is video file';
-        if ($finder->is(array('htm','html'))) echo ' | is HTML';
+        if ($finder->isDotFile()) {
+            echo ' | is dot file';
+        }
+        if ($finder->isImage()) {
+            echo ' | is image file';
+        }
+        if ($finder->isVideo()) {
+            echo ' | is video file';
+        }
+        if ($finder->is(array('htm', 'html'))) {
+            echo ' | is HTML';
+        }
+    } elseif ($finder->isDir()) {
+        echo ' | is dir';
     }
-    elseif ($finder->isDir()) echo ' | is dir';
     echo "\n";
 }
 
@@ -828,17 +864,26 @@ $finder = Finder::create()
     ->name('*.jpg')
     ->in(__DIR__.'/test')
     ;
-foreach($finder as $key=>$val) {
+foreach ($finder as $key=>$val) {
     $val->setRootDir(__DIR__);
     echo $key.' : '.$val->getFilename();
     if ($finder->isFile()) {
         echo ' | is file';
-        if ($finder->isDotFile()) echo ' | is dot file';
-        if ($finder->isImage()) echo ' | is image file';
-        if ($finder->isVideo()) echo ' | is video file';
-        if ($finder->is(array('htm','html'))) echo ' | is HTML';
+        if ($finder->isDotFile()) {
+            echo ' | is dot file';
+        }
+        if ($finder->isImage()) {
+            echo ' | is image file';
+        }
+        if ($finder->isVideo()) {
+            echo ' | is video file';
+        }
+        if ($finder->is(array('htm', 'html'))) {
+            echo ' | is HTML';
+        }
+    } elseif ($finder->isDir()) {
+        echo ' | is dir';
     }
-    elseif ($finder->isDir()) echo ' | is dir';
     echo "\n";
 }
 ?>
@@ -850,28 +895,28 @@ foreach($finder as $key=>$val) {
 <?php
 echo '<p><strong>Bits:</strong></p><ul>';
 echo '<li>empty:<ul>';
-echo '<li>0x000000: '.var_export(0x000000,1).'</li>';
+echo '<li>0x000000: '.var_export(0x000000, 1).'</li>';
 echo '</ul></li>';
 echo '<li>1x1:<ul>';
-echo '<li>0x000001: '.var_export(0x000001,1).'</li>';
-echo '<li>0x000010: '.var_export(0x000010,1).'</li>';
-echo '<li>0x000100: '.var_export(0x000100,1).'</li>';
-echo '<li>0x001000: '.var_export(0x001000,1).'</li>';
-echo '<li>0x010000: '.var_export(0x010000,1).'</li>';
-echo '<li>0x100000: '.var_export(0x100000,1).'</li>';
+echo '<li>0x000001: '.var_export(0x000001, 1).'</li>';
+echo '<li>0x000010: '.var_export(0x000010, 1).'</li>';
+echo '<li>0x000100: '.var_export(0x000100, 1).'</li>';
+echo '<li>0x001000: '.var_export(0x001000, 1).'</li>';
+echo '<li>0x010000: '.var_export(0x010000, 1).'</li>';
+echo '<li>0x100000: '.var_export(0x100000, 1).'</li>';
 echo '</ul></li>';
 echo '<li>2x1:<ul>';
-echo '<li>0x000011: '.var_export(0x000011,1).'</li>';
-echo '<li>0x000110: '.var_export(0x000110,1).'</li>';
-echo '<li>0x001100: '.var_export(0x001100,1).'</li>';
-echo '<li>0x011000: '.var_export(0x011000,1).'</li>';
-echo '<li>0x110000: '.var_export(0x110000,1).'</li>';
+echo '<li>0x000011: '.var_export(0x000011, 1).'</li>';
+echo '<li>0x000110: '.var_export(0x000110, 1).'</li>';
+echo '<li>0x001100: '.var_export(0x001100, 1).'</li>';
+echo '<li>0x011000: '.var_export(0x011000, 1).'</li>';
+echo '<li>0x110000: '.var_export(0x110000, 1).'</li>';
 echo '</ul></li>';
 echo '<li>1x1 + last 1:<ul>';
-echo '<li>0x000101: '.var_export(0x000101,1).'</li>';
-echo '<li>0x001001: '.var_export(0x001001,1).'</li>';
-echo '<li>0x010001: '.var_export(0x010001,1).'</li>';
-echo '<li>0x100001: '.var_export(0x100001,1).'</li>';
+echo '<li>0x000101: '.var_export(0x000101, 1).'</li>';
+echo '<li>0x001001: '.var_export(0x001001, 1).'</li>';
+echo '<li>0x010001: '.var_export(0x010001, 1).'</li>';
+echo '<li>0x100001: '.var_export(0x100001, 1).'</li>';
 echo '</ul></li>';
 echo '</ul>';
 
@@ -912,14 +957,22 @@ $flags = array(
     'WebFilesystem\WebFilesystemIterator::SKIP_DOTTED'
 );
 
-foreach($flags as $flag) {
+foreach ($flags as $flag) {
     echo "<br />Test on flag ".$flag." :";
     eval("\$testa = (\$a & $flag);");
     eval("\$testb = (\$b & $flag);");
-    echo "<br />&nbsp;=> on a : ".var_export($testa,1).' with `if...`: ';
-    if ($testa) echo 'ON'; else echo 'OFF';
-    echo "<br />&nbsp;=> on b : ".var_export($testb,1).' with `if...`: ';
-    if ($testb) echo 'ON'; else echo 'OFF';
+    echo "<br />&nbsp;=> on a : ".var_export($testa, 1).' with `if...`: ';
+    if ($testa) {
+        echo 'ON';
+    } else {
+        echo 'OFF';
+    }
+    echo "<br />&nbsp;=> on b : ".var_export($testb, 1).' with `if...`: ';
+    if ($testb) {
+        echo 'ON';
+    } else {
+        echo 'OFF';
+    }
 }
 
 ?>
@@ -932,33 +985,33 @@ echo 'use WebFilesystem\WebFilesystem;'."\n";
 echo "\n\n";
 echo '## Test of `WebFilesystem::isCommonFile()` method:'."\n";
 echo 'echo WebFilesystem::isCommonFile( "my_file.txt" ); // must be true:'."\n";
-echo "\t".'=> '.var_export(WebFilesystem::isCommonFile( "my_file.txt" ),1)."\n";
+echo "\t".'=> '.var_export(WebFilesystem::isCommonFile("my_file.txt"), 1)."\n";
 echo 'echo WebFilesystem::isCommonFile( "._my_file.txt" ); // must be false:'."\n";
-echo "\t".'=> '.var_export(WebFilesystem::isCommonFile( "._my_file.txt" ),1)."\n";
+echo "\t".'=> '.var_export(WebFilesystem::isCommonFile("._my_file.txt"), 1)."\n";
 echo 'echo WebFilesystem::isCommonFile( "my_file.txt~" ); // must be false:'."\n";
-echo "\t".'=> '.var_export(WebFilesystem::isCommonFile( "my_file.txt~" ),1)."\n";
+echo "\t".'=> '.var_export(WebFilesystem::isCommonFile("my_file.txt~"), 1)."\n";
 echo 'echo WebFilesystem::isCommonFile( "my~file._backup.txt" ); // must be true:'."\n";
-echo "\t".'=> '.var_export(WebFilesystem::isCommonFile( "my~file._backup.txt" ),1)."\n";
+echo "\t".'=> '.var_export(WebFilesystem::isCommonFile("my~file._backup.txt"), 1)."\n";
 
 echo "\n\n";
 echo '## Test of `WebFilesystem::isCommonImage()` method:'."\n";
 echo 'echo WebFilesystem::isCommonImage( "my_file.jpg" ); // must be true:'."\n";
-echo "\t".'=> '.var_export(WebFilesystem::isCommonImage( "my_file.jpg" ),1)."\n";
+echo "\t".'=> '.var_export(WebFilesystem::isCommonImage("my_file.jpg"), 1)."\n";
 echo 'echo WebFilesystem::isCommonImage( "my_file.txt" ); // must be false:'."\n";
-echo "\t".'=> '.var_export(WebFilesystem::isCommonImage( "my_file.txt" ),1)."\n";
+echo "\t".'=> '.var_export(WebFilesystem::isCommonImage("my_file.txt"), 1)."\n";
 
 echo "\n\n";
 echo '## Test of `WebFilesystem::getHumanReadableName()` method:'."\n";
 echo 'echo WebFilesystem::getHumanReadableName( "my_bizarre.file-name.jpg" ); '."\n";
-echo "\t".'=> '.var_export(WebFilesystem::getHumanReadableName( "my_bizarre.file-name.jpg" ),1)."\n";
+echo "\t".'=> '.var_export(WebFilesystem::getHumanReadableName("my_bizarre.file-name.jpg"), 1)."\n";
 
 echo "\n\n";
 echo '## Creation of a new `WebRecursiveDirectoryIterator` with flags `FilesystemIterator::KEY_AS_PATHNAME | FilesystemIterator::CURRENT_AS_PATHNAME | FilesystemIterator::SKIP_DOTTED` callback `WebFilesystem\WebFilesystem::isCommonImage`: (dir= "'.$arg_dir.'")'."\n";
 echo '$dir_test = new WebRecursiveDirectoryIterator( "'.$arg_dir.'", 16432, "WebFilesystem\WebFilesystem::isCommonImage" );'."\n";
-$dir_test = new WebRecursiveDirectoryIterator( $arg_dir, FilesystemIterator::KEY_AS_PATHNAME | FilesystemIterator::CURRENT_AS_PATHNAME | WebFilesystemIterator::SKIP_DOTTED, "WebFilesystem\WebFilesystem::isCommonImage" );
+$dir_test = new WebRecursiveDirectoryIterator($arg_dir, FilesystemIterator::KEY_AS_PATHNAME | FilesystemIterator::CURRENT_AS_PATHNAME | WebFilesystemIterator::SKIP_DOTTED, "WebFilesystem\WebFilesystem::isCommonImage");
 echo '## Seeking to item '.$arg_i.':'."\n";
 echo '$dir_test->seek( (int) "'.$arg_i.'" );'."\n";
-$dir_test->seek( intVal('.$arg_i.') );
+$dir_test->seek(intVal('.$arg_i.'));
 echo '$dir_test->getPath();'."\n";
 echo "\t".'=> '.$dir_test->getPath()."\n";
 echo '$dir_test->getFilename();'."\n";
@@ -977,8 +1030,8 @@ echo "\t".'=> '.$dir_test->current()."\n";
 echo "\n";
 echo '## Test of `DirectoryIterator` class on "parts/":'."\n";
 echo '$dir_obj = new DirectoryIterator( "parts" );'."\n";
-$dir_obj = new DirectoryIterator( 'parts' );
-echo "\t".'=> '.var_export($dir_obj,1)."\n";
+$dir_obj = new DirectoryIterator('parts');
+echo "\t".'=> '.var_export($dir_obj, 1)."\n";
 
 echo "\n";
 echo '## Loop on $dir_obj:'."\n";
@@ -989,20 +1042,19 @@ echo '}'."\n";
 
 echo "\n";
 echo '## Result of the loop is:'."\n";
-foreach($dir_obj as $_f)
-{
+foreach ($dir_obj as $_f) {
     echo "\t".$dir_obj->key().' => '.$_f->getFilename()
-        ."\t".'['.var_export(get_class($dir_obj->current()),1).']'
-        ."\t".'['.var_export(get_class($_f),1).']'
+        ."\t".'['.var_export(get_class($dir_obj->current()), 1).']'
+        ."\t".'['.var_export(get_class($_f), 1).']'
         ."\n";
 }
 
 echo "\n";
 echo '## Test of `FilesystemIterator` class on "parts/":'."\n";
 echo '$dir_obj2 = new FilesystemIterator( "parts" );'."\n";
-$dir_obj2 = new FilesystemIterator( 'parts' );
+$dir_obj2 = new FilesystemIterator('parts');
 echo 'echo $dir_obj2->getFlags();'."\n";
-echo "\t".'=> '.var_export($dir_obj2->getFlags(),1)."\n";
+echo "\t".'=> '.var_export($dir_obj2->getFlags(), 1)."\n";
 
 echo "\n";
 echo '## Loop on $dir_obj2:'."\n";
@@ -1013,11 +1065,10 @@ echo '}'."\n";
 
 echo "\n";
 echo '## Result of the loop is:'."\n";
-foreach($dir_obj2 as $_f)
-{
+foreach ($dir_obj2 as $_f) {
     echo "\t".$dir_obj2->key().' => '.$_f->getFilename()
-        ."\t".'['.var_export(get_class($dir_obj2->current()),1).']'
-        ."\t".'['.var_export(get_class($_f),1).']'
+        ."\t".'['.var_export(get_class($dir_obj2->current()), 1).']'
+        ."\t".'['.var_export(get_class($_f), 1).']'
         ."\n";
 }
 
@@ -1026,24 +1077,23 @@ echo '## Redefinition of flags on $dir_obj2: FilesystemIterator::KEY_AS_FILENAME
 echo '$dir_obj2->setFlags(FilesystemIterator::CURRENT_AS_SELF | FilesystemIterator::KEY_AS_FILENAME);'."\n";
 $dir_obj2->setFlags(FilesystemIterator::CURRENT_AS_SELF | FilesystemIterator::KEY_AS_FILENAME);
 echo 'echo $dir_obj2->getFlags();'."\n";
-echo "\t".'=> '.var_export($dir_obj2->getFlags(),1)."\n";
+echo "\t".'=> '.var_export($dir_obj2->getFlags(), 1)."\n";
 
 echo "\n";
 echo '## Result of the loop is now:'."\n";
-foreach($dir_obj2 as $_f)
-{
+foreach ($dir_obj2 as $_f) {
     echo "\t".$dir_obj2->key().' => '.$_f->getFilename()
-        ."\t".'['.var_export(get_class($dir_obj2->current()),1).']'
-        ."\t".'['.var_export(get_class($_f),1).']'
+        ."\t".'['.var_export(get_class($dir_obj2->current()), 1).']'
+        ."\t".'['.var_export(get_class($_f), 1).']'
         ."\n";
 }
 
 echo "\n";
 echo '## Test of `RecursiveDirectoryIterator` class on "photos/":'."\n";
 echo '$dir_obj3 = new RecursiveDirectoryIterator( "photos" );'."\n";
-$dir_obj3 = new RecursiveDirectoryIterator( 'photos' );
+$dir_obj3 = new RecursiveDirectoryIterator('photos');
 echo 'echo $dir_obj3->getFlags();'."\n";
-echo "\t".'=> '.var_export($dir_obj3->getFlags(),1)."\n";
+echo "\t".'=> '.var_export($dir_obj3->getFlags(), 1)."\n";
 
 echo "\n";
 echo '## Loop on $dir_obj3:'."\n";
@@ -1056,18 +1106,19 @@ echo '}'."\n";
 
 echo "\n";
 echo '## Result of the loop is:'."\n";
-foreach($dir_obj3 as $_f)
-{
+foreach ($dir_obj3 as $_f) {
     echo "\t".$dir_obj3->key().' => '.$_f->getFilename()
-        ."\t".'['.var_export(get_class($dir_obj3->current()),1).']'
-        ."\t".'['.var_export(get_class($_f),1).']'
+        ."\t".'['.var_export(get_class($dir_obj3->current()), 1).']'
+        ."\t".'['.var_export(get_class($_f), 1).']'
         ."\n";
-    echo "\t".var_export($dir_obj3->hasChildren(),1)."\n";
-    if ($dir_obj3->hasChildren()) echo "\t".var_export($dir_obj3->getChildren(),1)
+    echo "\t".var_export($dir_obj3->hasChildren(), 1)."\n";
+    if ($dir_obj3->hasChildren()) {
+        echo "\t".var_export($dir_obj3->getChildren(), 1)
         ."\t".'['.get_class($dir_obj3->getChildren()).']'
-        ."\t".'['.var_export($dir_obj3->getSubPath(),1).']'
-        ."\t".'['.var_export($dir_obj3->getSubPathName(),1).']'
+        ."\t".'['.var_export($dir_obj3->getSubPath(), 1).']'
+        ."\t".'['.var_export($dir_obj3->getSubPathName(), 1).']'
         ."\n";
+    }
 }
 
 ?>
@@ -1082,15 +1133,14 @@ foreach($dir_obj3 as $_f)
 echo "\n";
 echo '## Test of `WebFilesystemIterator` class on "test/":'."\n";
 echo '$wfsi_test = new WebFilesystemIterator( "test" );'."\n";
-$wfsi_test = new WebFilesystemIterator( 'test' );
+$wfsi_test = new WebFilesystemIterator('test');
 
 echo "\n";
-foreach($wfsi_test as $_f)
-{
+foreach ($wfsi_test as $_f) {
     echo $wfsi_test->key().' [class '.get_class($_f).']'
         ."\n\t".'pathname is => '.$_f->getPathname()
         ."\n\t".'realpath is => '.$_f->getRealPath()
-        ."\n\t".'is link? :: '.var_export($_f->isLink(),1)
+        ."\n\t".'is link? :: '.var_export($_f->isLink(), 1)
 //        .($_f->isLink() ? "\n\t".'linkpath is => '.$_f->getLinkTarget() : '')
         ."\n\n";
 }
@@ -1102,14 +1152,13 @@ foreach($wfsi_test as $_f)
 echo "\n";
 echo '## Test of `WebFilesystemIterator` class on "test/" with the flag "FilesystemIterator::CURRENT_AS_FILEINFO":'."\n";
 echo '$wfsi_test = new WebFilesystemIterator( "test", FilesystemIterator::CURRENT_AS_FILEINFO );'."\n";
-$wfsi_test_spl = new WebFilesystemIterator( 'test', FilesystemIterator::CURRENT_AS_FILEINFO );
+$wfsi_test_spl = new WebFilesystemIterator('test', FilesystemIterator::CURRENT_AS_FILEINFO);
 echo "\n";
-foreach($wfsi_test_spl as $_f)
-{
+foreach ($wfsi_test_spl as $_f) {
     echo $wfsi_test_spl->key().' [class '.get_class($_f).']'
         ."\n\t".'pathname is => '.$_f->getPathname()
         ."\n\t".'realpath is => '.$_f->getRealPath()
-        ."\n\t".'is link? :: '.var_export($_f->isLink(),1)
+        ."\n\t".'is link? :: '.var_export($_f->isLink(), 1)
 //        .($_f->isLink() ? "\n\t".'linkpath is => '.$_f->getLinkTarget() : '')
         ."\n\n";
 }
@@ -1121,15 +1170,14 @@ foreach($wfsi_test_spl as $_f)
 echo "\n";
 echo '## Test of `FilesystemIterator` class on "test/":'."\n";
 echo '$wfsi_test = new FilesystemIterator( "test" );'."\n";
-$wfsi_test = new FilesystemIterator( 'test' );
+$wfsi_test = new FilesystemIterator('test');
 
 echo "\n";
-foreach($wfsi_test as $_f)
-{
+foreach ($wfsi_test as $_f) {
     echo $wfsi_test->key().' [class '.get_class($_f).']'
         ."\n\t".'pathname is => '.$_f->getPathname()
         ."\n\t".'realpath is => '.$_f->getRealPath()
-        ."\n\t".'is link? :: '.var_export($_f->isLink(),1)
+        ."\n\t".'is link? :: '.var_export($_f->isLink(), 1)
 //        .($_f->isLink() ? "\n\t".'linkpath is => '.$_f->getLinkTarget() : '')
         ."\n\n";
 }

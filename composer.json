@@ -20,9 +20,15 @@
     },
     "require-dev": {
         "sami/sami": "@stable",
-        "phpmd/phpmd" : "@stable"
+        "phpmd/phpmd" : "@stable",
+        "fabpot/php-cs-fixer": "@stable"
     },
-    "autoload": { "psr-0": { "WebFilesystem": "src/" } },
+    "autoload": { "psr-4": { "WebFilesystem\\": "src/WebFilesystem/" } },
+    "scripts": {
+        "build-doc": "php vendor/bin/sami.php update .sami.php",
+        "update-doc": "php vendor/bin/sami.php update .sami.php",
+        "cs-fixer": "php vendor/bin/php-cs-fixer fix -v"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"

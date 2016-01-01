@@ -2,7 +2,7 @@
 /**
  * This file is part of the WebFilesystem package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,6 @@ namespace WebFilesystem\FileType;
 
 use WebFilesystem\WebFilesystem;
 use WebFilesystem\WebFileInfo;
-
 use Library\Helper\Directory as DirectoryHelper;
 
 /**
@@ -106,16 +105,16 @@ class WebImage extends WebFileInfo
         if (!empty($file_name)) {
             $path = DirectoryHelper::slashDirname($path).$file_name;
         }
-        parent::__construct( $path, $root_dir );
+        parent::__construct($path, $root_dir);
         if ($must_exist && !$this->exists()) {
             throw new \Exception(
                 sprintf('File "%s" (searched in "%s") not found!', $path, $root_dir)
             );
         }
-        parent::setWebPath( $this->getPath() );
-        $this->setThumbFilename( $this->getBasename() );
-        $this->setThumbRootDir( $this->getRootDir() );
-        $this->setThumbPath( sprintf(self::$THUMBS_PATH, rtrim($this->getWebPath(), '/')) );
+        parent::setWebPath($this->getPath());
+        $this->setThumbFilename($this->getBasename());
+        $this->setThumbRootDir($this->getRootDir());
+        $this->setThumbPath(sprintf(self::$THUMBS_PATH, rtrim($this->getWebPath(), '/')));
     }
 
     /**
@@ -249,7 +248,7 @@ class WebImage extends WebFileInfo
         $standard = self::getImageInfos();
         $iptc = self::getIptcInfos();
         $exif = self::getExifInfos();
-        $result = array_merge( $standard, $iptc, $exif, array(
+        $result = array_merge($standard, $iptc, $exif, array(
             'getimagesize' => $standard, 'iptc' => $iptc, 'exif' => $exif
         ));
         return $result;
@@ -265,7 +264,7 @@ class WebImage extends WebFileInfo
         if (!$this->exists()) {
             return false;
         }
-        $data = getimagesize( $this->getRealPath() );
+        $data = getimagesize($this->getRealPath());
         $result = array();
         if (!empty($data)) {
             if (!empty($data[0])) {
@@ -309,14 +308,14 @@ class WebImage extends WebFileInfo
         if (!$this->exists()) {
             return false;
         }
-        getimagesize( $this->getRealPath(), $data );
+        getimagesize($this->getRealPath(), $data);
         $_data = empty($data["APP13"]) ? array() : iptcparse($data["APP13"]);
         $iptcdata = array();
         if (!empty($data)) {
-            foreach($_data as $tag => $tab) {
-               $tag = substr($tag, 2);
-               if (array_key_exists($tag, self::$iptc_fields)) {
-                   $iptcdata[self::$iptc_fields[$tag]] = join($tab, ', ');
+            foreach ($_data as $tag => $tab) {
+                $tag = substr($tag, 2);
+                if (array_key_exists($tag, self::$iptc_fields)) {
+                    $iptcdata[self::$iptc_fields[$tag]] = join($tab, ', ');
                 }
             }
         }
@@ -335,13 +334,17 @@ class WebImage extends WebFileInfo
         }
         $exifdata = array();
         if ($data = exif_read_data($this->getRealPath(), 'EXIF', true)) {
-            foreach ($data as $key => $section) {       
+            foreach ($data as $key => $section) {
                 foreach ($section as $name => $value) {
                     if (is_string($value)) {
-                        if (!isset($exifdata[$name])) $exifdata[$name] = '';
+                        if (!isset($exifdata[$name])) {
+                            $exifdata[$name] = '';
+                        }
                         $exifdata[$name] .= $value;
                     } elseif (is_array($value)) {
-                        if (!isset($exifdata[$name])) $exifdata[$name] = array();
+                        if (!isset($exifdata[$name])) {
+                            $exifdata[$name] = array();
+                        }
                         $exifdata[$name][] = $value;
                     }
                 }
@@ -485,7 +488,4 @@ class WebImage extends WebFileInfo
         $image_infos = $this->getImageInfos();
         return isset($image_infos['width']) ? $image_infos['width'] : null;
     }
-
 }
-
-// Endfile

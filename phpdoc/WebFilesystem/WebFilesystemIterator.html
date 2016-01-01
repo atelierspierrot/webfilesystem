@@ -12,6 +12,9 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/typeahead.min.js"></script>
         <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -72,8 +75,9 @@
     </div>
 
     <p>    class
-    <strong>WebFilesystemIterator</strong>        extends <a href="http://php.net/FilesystemIterator"><abbr title="FilesystemIterator">FilesystemIterator</abbr></a>        implements
-        <a href="http://php.net/SeekableIterator"><abbr title="SeekableIterator">SeekableIterator</abbr></a>, <a href="http://php.net/Traversable"><abbr title="Traversable">Traversable</abbr></a>, <a href="http://php.net/Iterator"><abbr title="Iterator">Iterator</abbr></a>, <a href="http://php.net/Countable"><abbr title="Countable">Countable</abbr></a></p>
+    <strong>WebFilesystemIterator</strong>        extends <a target="_blank" href="http://php.net/FilesystemIterator"><abbr title="FilesystemIterator">FilesystemIterator</abbr></a>        implements
+        <a target="_blank" href="http://php.net/SeekableIterator"><abbr title="SeekableIterator">SeekableIterator</abbr></a>, <a target="_blank" href="http://php.net/Traversable"><abbr title="Traversable">Traversable</abbr></a>, <a target="_blank" href="http://php.net/Iterator"><abbr title="Iterator">Iterator</abbr></a>, <a target="_blank" href="http://php.net/Countable"><abbr title="Countable">Countable</abbr></a>
+</p>
 
             <div class="description">
             <p>Special web's version of the PHP >=5.3 standard class <code>FilesystemIterator</code> <a href="http://www.php.net/manual/en/class.splfileinfo.php">http://www.php.net/manual/en/class.splfileinfo.php</a></p>                    </div>
@@ -106,24 +110,30 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $path, int $flags = 16432)
+                    <a href="#method___construct">__construct</a>(
+    string $path, 
+    int $flags = 16432)
                                             <p>Overwriting the constructor to use the new <code>setFlags()</code> method and set a new default flags value</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
+                    
+    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setFlags">setFlags</a>(int $flags = null)
+                    <a href="#method_setFlags">setFlags</a>(
+    int $flags = null)
                                             <p>Overwriting the default <code>setFlags()</code> method to accept new flags</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    
+    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFlags">getFlags</a>()
@@ -132,7 +142,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    mixed
+                    
+    mixed
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_current">current</a>()
@@ -141,7 +152,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_rewind">rewind</a>()
@@ -150,7 +162,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_next">next</a>()
@@ -159,7 +172,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    
+    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_count">count</a>()
@@ -174,9 +188,12 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 65</div>
+        <div class="location">at line 67</div>
         <code>                    
-    <strong>__construct</strong>(string $path, int $flags = 16432)</code>
+    
+    <strong>__construct</strong>(
+    string $path, 
+    int $flags = 16432)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -186,12 +203,14 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$path</td>
                 <td>The path of the new filesystem object</td>
             </tr>
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$flags</td>
                 <td>The object options'flags value</td>
             </tr>
@@ -206,9 +225,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setFlags">
-        <div class="location">at line 81</div>
-        <code>                    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
-    <strong>setFlags</strong>(int $flags = null)</code>
+        <div class="location">at line 83</div>
+        <code>                    
+    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a>
+    <strong>setFlags</strong>(
+    int $flags = null)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -218,7 +239,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$flags</td>
                 <td>A set of object options'flags</td>
             </tr>
@@ -229,7 +251,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></td>
+            <td>
+    <a href="../WebFilesystem/WebFilesystemIterator.html"><abbr title="WebFilesystem\WebFilesystemIterator">WebFilesystemIterator</abbr></a></td>
             <td>The object itself is returned for method chaining</td>
         </tr>
     </table>
@@ -242,8 +265,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFlags">
-        <div class="location">at line 92</div>
-        <code>                    int
+        <div class="location">at line 94</div>
+        <code>                    
+    int
     <strong>getFlags</strong>()</code>
     </h3>
     <div class="details">
@@ -255,7 +279,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>
+    int</td>
             <td>The current options'flags value for the object</td>
         </tr>
     </table>
@@ -268,8 +293,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_current">
-        <div class="location">at line 104</div>
-        <code>                    mixed
+        <div class="location">at line 106</div>
+        <code>                    
+    mixed
     <strong>current</strong>()</code>
     </h3>
     <div class="details">
@@ -281,7 +307,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed</td>
+            <td>
+    mixed</td>
             <td>The value of the current iteration, as a <code>WebFileInfo</code> object if requested or as the default result of the parent's method</td>
         </tr>
     </table>
@@ -294,8 +321,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rewind">
-        <div class="location">at line 130</div>
-        <code>                    void
+        <div class="location">at line 132</div>
+        <code>                    
+    void
     <strong>rewind</strong>()</code>
     </h3>
     <div class="details">
@@ -307,7 +335,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -321,8 +350,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_next">
-        <div class="location">at line 145</div>
-        <code>                    void
+        <div class="location">at line 147</div>
+        <code>                    
+    void
     <strong>next</strong>()</code>
     </h3>
     <div class="details">
@@ -334,7 +364,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -348,8 +379,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_count">
-        <div class="location">at line 158</div>
-        <code>                    int
+        <div class="location">at line 160</div>
+        <code>                    
+    int
     <strong>count</strong>()</code>
     </h3>
     <div class="details">
@@ -361,7 +393,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>
+    int</td>
             <td>The number of valid items of the object</td>
         </tr>
     </table>

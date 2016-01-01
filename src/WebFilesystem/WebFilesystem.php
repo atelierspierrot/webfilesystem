@@ -2,7 +2,7 @@
 /**
  * This file is part of the WebFilesystem package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -93,7 +93,7 @@ class WebFilesystem
         if (!empty($ext)) {
             $file_name = str_replace('.'.$ext, '', $file_name);
         }
-        return ucfirst( str_replace(self::$REPLACEMENT_FILENAMES_CHARS, ' ', $file_name) );
+        return ucfirst(str_replace(self::$REPLACEMENT_FILENAMES_CHARS, ' ', $file_name));
     }
 
     /**
@@ -122,7 +122,7 @@ class WebFilesystem
     public static function getTransformedFilesize($size = 0, $round = 3, $dec_delimiter = ',')
     {
         $count=0;
-        while($size >= 1024 && $count < (count(self::$FILESIZE_ORDERED_UNITS)-1)) {
+        while ($size >= 1024 && $count < (count(self::$FILESIZE_ORDERED_UNITS)-1)) {
             $count++;
             $size /= 1024;
         }
@@ -132,7 +132,7 @@ class WebFilesystem
         } else {
             $number = $size;
         }
-        return str_replace('.',$dec_delimiter,$number).' '.self::$FILESIZE_ORDERED_UNITS[$count];
+        return str_replace('.', $dec_delimiter, $number).' '.self::$FILESIZE_ORDERED_UNITS[$count];
     }
 
     /**
@@ -162,7 +162,7 @@ class WebFilesystem
         if (in_array($file_name, self::$IGNORED_FILES)) {
             return false;
         }
-        foreach(self::$IGNORED_FILES_MASKS as $_mask) {
+        foreach (self::$IGNORED_FILES_MASKS as $_mask) {
             if (preg_match($_mask, $file_name)) {
                 return false;
             }
@@ -222,7 +222,4 @@ class WebFilesystem
         $ext = self::getExtensionName($file_name);
         return ($ext ? in_array(strtolower($ext), self::$COMMON_VIDEOS_EXTS) : false);
     }
-
 }
-
-// Endfile

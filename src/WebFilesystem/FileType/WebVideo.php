@@ -2,7 +2,7 @@
 /**
  * This file is part of the WebFilesystem package.
  *
- * Copyright (c) 2013-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2013-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,6 @@ namespace WebFilesystem\FileType;
 
 use WebFilesystem\WebFilesystem;
 use WebFilesystem\WebFileInfo;
-
 use Library\Helper\Directory as DirectoryHelper;
 
 /**
@@ -69,16 +68,16 @@ class WebVideo extends WebFileInfo
         if (!empty($file_name)) {
             $path = DirectoryHelper::slashDirname($path).$file_name;
         }
-        parent::__construct( $path, $root_dir );
+        parent::__construct($path, $root_dir);
         if ($must_exist && !$this->exists()) {
             throw new \Exception(
                 sprintf('File "%s" (searched in "%s") not found!', $path, $root_dir)
             );
         }
-        parent::setWebPath( $this->getPath() );
-        $this->setThumbFilename( $this->getBasename() );
-        $this->setThumbRootDir( $this->getRootDir() );
-        $this->setThumbPath( sprintf(self::$THUMBS_PATH, rtrim($this->getWebPath(), '/')) );
+        parent::setWebPath($this->getPath());
+        $this->setThumbFilename($this->getBasename());
+        $this->setThumbRootDir($this->getRootDir());
+        $this->setThumbPath(sprintf(self::$THUMBS_PATH, rtrim($this->getWebPath(), '/')));
     }
 
     /**
@@ -224,7 +223,7 @@ class WebVideo extends WebFileInfo
             return false;
         }
         $vid = new \finfo(FILEINFO_MIME_TYPE);
-        $data = $vid->file( $this->getRealPath() );
+        $data = $vid->file($this->getRealPath());
         return $data;
     }
 
@@ -277,7 +276,4 @@ class WebVideo extends WebFileInfo
         $seconds    = next($hour_full);
         return "$year-$month-$day $hour:$minutes:$seconds";
     }
-
 }
-
-// Endfile
